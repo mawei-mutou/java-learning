@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="9dd256a1-99c5-4521-8d89-8f25ddfdddd4" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="1VjBFbiVvuLGYZMttFuuOZbbDMX" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+  </component>
+  <component name="RunManager" selected="Application.TextOperator01">
+    <configuration name="TestConstant" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Package1.TestConstant" />
+      <module name="12-31" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Package1.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TextOperator01" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Package1.TextOperator01" />
+      <module name="12-31" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Package1.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TextPrimitiveDataType" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Package1.TextPrimitiveDataType" />
+      <module name="12-31" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Package1.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TextPrimitiveDataType2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Package1.TextPrimitiveDataType2" />
+      <module name="12-31" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Package1.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ballgame" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Package1.ballgame" />
+      <module name="12-31" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Package1.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.TextOperator01" />
+        <item itemvalue="Application.TextPrimitiveDataType2" />
+        <item itemvalue="Application.TextPrimitiveDataType" />
+        <item itemvalue="Application.ballgame" />
+        <item itemvalue="Application.TestConstant" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="9dd256a1-99c5-4521-8d89-8f25ddfdddd4" name="Default Changelist" comment="" />
+      <created>1577756520402</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1577756520402</updated>
+      <workItem from="1577756522966" duration="17048000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="445" y="251" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1577771483444">
+      <screen x="0" y="23" width="1440" height="836" />
+    </state>
+    <state x="445" y="251" key="#com.intellij.fileTypes.FileTypeChooser/0.23.1440.836@0.23.1440.836" timestamp="1577771483444" />
+    <state width="1440" height="224" key="GridCell.Tab.0.bottom" timestamp="1577785596308">
+      <screen x="0" y="23" width="1440" height="836" />
+    </state>
+    <state width="1440" height="224" key="GridCell.Tab.0.bottom/0.23.1440.836@0.23.1440.836" timestamp="1577785596308" />
+    <state width="1440" height="224" key="GridCell.Tab.0.center" timestamp="1577785596307">
+      <screen x="0" y="23" width="1440" height="836" />
+    </state>
+    <state width="1440" height="224" key="GridCell.Tab.0.center/0.23.1440.836@0.23.1440.836" timestamp="1577785596307" />
+    <state width="1440" height="224" key="GridCell.Tab.0.left" timestamp="1577785596306">
+      <screen x="0" y="23" width="1440" height="836" />
+    </state>
+    <state width="1440" height="224" key="GridCell.Tab.0.left/0.23.1440.836@0.23.1440.836" timestamp="1577785596306" />
+    <state width="1440" height="224" key="GridCell.Tab.0.right" timestamp="1577785596307">
+      <screen x="0" y="23" width="1440" height="836" />
+    </state>
+    <state width="1440" height="224" key="GridCell.Tab.0.right/0.23.1440.836@0.23.1440.836" timestamp="1577785596307" />
+    <state width="1440" height="224" key="GridCell.Tab.1.bottom" timestamp="1577773430393">
+      <screen x="0" y="23" width="1440" height="836" />
+    </state>
+    <state width="1440" height="224" key="GridCell.Tab.1.bottom/0.23.1440.836@0.23.1440.836" timestamp="1577773430393" />
+    <state width="1440" height="224" key="GridCell.Tab.1.center" timestamp="1577773430393">
+      <screen x="0" y="23" width="1440" height="836" />
+    </state>
+    <state width="1440" height="224" key="GridCell.Tab.1.center/0.23.1440.836@0.23.1440.836" timestamp="1577773430393" />
+    <state width="1440" height="224" key="GridCell.Tab.1.left" timestamp="1577773430393">
+      <screen x="0" y="23" width="1440" height="836" />
+    </state>
+    <state width="1440" height="224" key="GridCell.Tab.1.left/0.23.1440.836@0.23.1440.836" timestamp="1577773430393" />
+    <state width="1440" height="224" key="GridCell.Tab.1.right" timestamp="1577773430393">
+      <screen x="0" y="23" width="1440" height="836" />
+    </state>
+    <state width="1440" height="224" key="GridCell.Tab.1.right/0.23.1440.836@0.23.1440.836" timestamp="1577773430393" />
+    <state width="500" height="445" key="SwitcherDM" timestamp="1577781140903">
+      <screen x="0" y="23" width="1440" height="836" />
+    </state>
+    <state width="500" height="445" key="SwitcherDM/0.23.1440.836@0.23.1440.836" timestamp="1577781140903" />
+    <state x="378" y="207" width="683" height="486" key="find.popup" timestamp="1577785347386">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="378" y="207" width="683" height="486" key="find.popup/0.0.1440.900@0.0.1440.900" timestamp="1577785347386" />
+    <state x="385" y="183" width="670" height="676" key="search.everywhere.popup" timestamp="1577781617172">
+      <screen x="0" y="23" width="1440" height="836" />
+    </state>
+    <state x="385" y="183" width="670" height="676" key="search.everywhere.popup/0.23.1440.836@0.23.1440.836" timestamp="1577781617172" />
+    <state x="558" y="239" key="svn.repositoryBrowser" timestamp="1577771345951">
+      <screen x="0" y="23" width="1440" height="836" />
+    </state>
+    <state x="558" y="239" key="svn.repositoryBrowser/0.23.1440.836@0.23.1440.836" timestamp="1577771345951" />
+  </component>
+</project>
