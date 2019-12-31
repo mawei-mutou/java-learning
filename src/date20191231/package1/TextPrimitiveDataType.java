@@ -41,6 +41,23 @@ public class TextPrimitiveDataType {
         BigDecimal bd3 = BigDecimal.valueOf(4.4 / 10.0);
         System.out.println(bd2 == bd3);
         System.out.println(bd3);
+        long cc = 1000L;
+        int a111=1;
+        a111++;
+        if (a==1 & b==3){
+            System.out.println("aa");
+        }
+        if (a==1 && b==3){
+            System.out.println("aa");
+        }
+
+        if (a==1 || b==3){
+            System.out.println("aa");
+        }
+
+        if (a==1 | (b++==3)){
+            System.out.println("aa");
+        }
 
     }
 }
