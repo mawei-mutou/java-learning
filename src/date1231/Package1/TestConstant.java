@@ -1,4 +1,5 @@
-package Package1;
+package date1231.Package1;
+
 
 /**测试常量
  * created with IntelliJ IDEA
