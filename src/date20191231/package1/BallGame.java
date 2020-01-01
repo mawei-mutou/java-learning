@@ -1,7 +1,6 @@
 package date20191231.package1;
 
 import java.awt.*;
-import java.io.File;
 import javax.swing.*;
 
 /**
@@ -11,7 +10,7 @@ import javax.swing.*;
  * time        : 13:54
  * description :
  */
-public class ballgame extends JFrame {
+public class BallGame extends JFrame {
     // 只有加上了 final static 才被认为是常量
     final static String NAME1="tomas";
     // 加上了final的修饰符 只能认为该值是不能重新被赋值的
@@ -57,7 +56,7 @@ public class ballgame extends JFrame {
     asdasd
     asdasd
      */
-    void launchFrame(String name, int age) {
+    void launchFrame() {
         setSize(1000, 1000);//窗口尺寸为300，300
         setLocation(50, 50);//以窗口左上角为坐标原点，y向下，x向左，目标窗帘左上角距离原点各为50。
         setVisible(true);
@@ -76,7 +75,7 @@ public class ballgame extends JFrame {
     //main方法是程序执行的入口
     public static void main(String[] args) {
         System.out.println("游戏小项目");
-        ballgame game = new ballgame();
-//        game.launchFrame();
+        BallGame game = new BallGame();
+        game.launchFrame();
     }
 }
