@@ -1,5 +1,15 @@
 package date20200102;
 
+import static java.lang.Math.PI;//这样导入则可以直接使用PI
+import java.lang.Math.*;//这样导入则使用PI需要Math.PI这样使用
+import java.util.*;
+import java.sql.*;
+
+
+import com.sun.xml.internal.ws.api.model.wsdl.WSDLOutput;
+import date20200101.TestConvert;
+import org.w3c.dom.ls.LSOutput;
+
 /**
  * created with IntelliJ IDEA
  * author      : YaoDong
@@ -37,5 +47,14 @@ public class User4 {
         /*//将u1的值复制给02方法里面的u,由于在2方法中，新建了一个对象，并将新对象的地址赋给了u，
         u的值发生了变化，因此u1所指地址处的值没有发生变化*/
         System.out.println(u1.name);
+        System.out.println(PI);
+
+        java.util.Date date = new java.util.Date();//在util和sql类里都存在date的类，它会默认使用更具体的那一个，若都没有具体到data，或者都具体到date了，还要使用则可以在date前加具体的包路径
+
+
     }
+
+    //使用不在一个包里的类时需要导入含这个类的包
+    TestConvert pp = new TestConvert();
+
 }
