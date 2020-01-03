@@ -2,7 +2,7 @@
 targets/
 
 # ide configure
-.idea/
+.idea/*
 
 # macOS files
 .src/.DS_Store
