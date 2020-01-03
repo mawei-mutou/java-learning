@@ -21,11 +21,14 @@ public class User4 {
     int id;
     String name;
     String pwd;
-
+    protected int height;//protected可以被自己、同一个包、不同的包的子类使用
     //构造方法
     public User4(int id, String name) {
         this.id =id;
         this.name = name;
+    }
+
+    public User4() {
     }
 
     public void testParameterTransfer01(User4 u) {
