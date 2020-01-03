@@ -11,7 +11,21 @@ import date20200101.TestMethod;
  */
 public class TestThis {
 
-    int a,b, c;//成员变量
+    int a=1;//成员变量
+    int b=2;//成员变量
+    int c=3;//成员变量
+
+//    静态块和代码块 这种写法不推荐
+//    static {
+//
+//    }
+//
+//    {
+//        a=2;
+//    }
+
+    public TestThis() {
+    }
 
     //构造方法
     TestThis(int a, int b) {
@@ -35,6 +49,7 @@ public class TestThis {
     }
 
     public static void main(String[] args) {
+        // hi是一个引用 指向新创建对象的内存地址
         TestThis hi = new TestThis(2, 3);
         hi.eat();
     }
