@@ -4,6 +4,6 @@ targets/
 # ide configure
 .idea/*
 
-# macOS files
-.src/.DS_Store
-./src/date20191231/.DS_Store
+# ignore macOS files
+*/.DS_Store
+#./src/date20191231/.DS_Store
