@@ -26,6 +26,7 @@ public class TextPrimitiveDataType {
         } else {
             System.out.println("d1!=d2");
         }
+        int b11=(113+33)*99;
         System.out.println("#######");
         //使用精确浮点运行
         BigDecimal bd = BigDecimal.valueOf(1.0);
