@@ -34,7 +34,9 @@ public class MyGameFrame extends Frame {
         Color c =g.getColor();
         g.drawImage(bg, 0, 0, null);
 
-        plane.drawSelf(g);//画飞机
+        //画飞机
+        plane.drawSelf(g);
+
         for (int i = 0; i < shells.length; i++) {
             shells[i].draw(g);
 

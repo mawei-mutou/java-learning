@@ -28,7 +28,7 @@ public class MyGameFrame extends JFrame {
         g.setFont(new Font("宋体", Font.BOLD, 50));
         g.drawOval(100, 100, 300, 300);
         g.fillRect(100,100,40,40);
-       // g.drawString("kkkk",200,200);//这里有问题
+        g.drawString("kkkk",200,200);//这里有问题
 
         g.drawImage(ball,250,250,null);
         g.setFont(f);

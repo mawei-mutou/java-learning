@@ -10,6 +10,7 @@ import java.awt.*;
  * description :
  */
 public class Plane extends GameObject {
+
     public void drawSelf(Graphics g) {
         g.drawImage(img, (int) x, (int) y, null);
         x++;
