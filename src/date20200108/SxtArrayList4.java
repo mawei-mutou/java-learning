@@ -14,7 +14,8 @@ public class SxtArrayList4 <E>{
             s1.add("mm" + i);
         }
         s1.get(5);
-        System.out.println(s1.get(5));
+        System.out.println(s1.get(5
+        ));
 
         System.out.println(s1);
 
