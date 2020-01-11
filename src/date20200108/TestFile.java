@@ -31,8 +31,9 @@ public class TestFile {
         System.out.println("File的绝对路径：" + f2.getAbsolutePath());
 
         File f3 = new File("c:/电影/华语/大陆");
-
+        // 创建第一级
         boolean flag = f3.mkdir();
+        // 批级创建
         boolean flag1 = f3.mkdirs();
         System.out.println(flag1);
     }
