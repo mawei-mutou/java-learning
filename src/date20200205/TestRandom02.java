@@ -1,18 +1,15 @@
-package date20200204;
+package date20200205;
 
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.IOException;
-import java.io.RandomAccessFile;
+import java.io.*;
 
 /**
  * created with IntelliJ IDEA
  * author      : YaoDong
- * date        : 2020/2/4
- * time        : 23:08
- * description :
+ * date        : 2020/2/5
+ * time        : 11:46
+ * description :将文件分割到指定文件夹中存储
  */
-public class TestRandom {
+public class TestRandom02 {
     public static void main(String[] args) {
         //分多少块
         File src = new File("C:/Users/MrYou/Desktop/java-learning/src/date20200204/IOTest07.java");
@@ -49,28 +46,23 @@ public class TestRandom {
     public static void split(int i,int beginPos,int actualSize) throws IOException {
         RandomAccessFile raf = new RandomAccessFile(
                 new File("C:/Users/MrYou/Desktop/java-learning/src/date20200204/IOTest07.java"), "r");
+        OutputStream raf2 = new FileOutputStream(
+                new File("C:/Users/MrYou/Desktop/java-learning/dest/" + i +"-"+ "Copy.java")) {
+        };
         raf.seek(beginPos);
         byte[] flush = new byte[1024];
         int len = -1;
 
         while ((len = raf.read(flush)) != -1) {
             if (actualSize > len) {
-                System.out.println(new String(flush, 0, len));
+                raf2.write(flush,0,len);
                 actualSize -= len;
             } else {
-                System.out.println(new String(flush, 0, actualSize));
+                raf2.write(flush, 0, actualSize);
                 break;
             }
         }
+        raf2.close();
         raf.close();
     }
-//    RandomAccessFile raf = new RandomAccessFile(
-//            new File("C:/Users/MrYou/Desktop/java-learning/src/date20200204/IOTest07.java"), "r");
-//        raf.seek(2);
-//    byte[] flush = new byte[1024];
-//    int len = -1;
-//        while ((len = raf.read(flush)) != -1) {
-//        System.out.println(new String(flush,0,len));
-//    }
-//        raf.close();
 }
