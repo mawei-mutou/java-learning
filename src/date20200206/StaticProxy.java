@@ -11,6 +11,16 @@ public class StaticProxy {
     public static void main(String[] args) {
        new WeddingCompany(new You()).happyMarry();
         System.out.println(new You() instanceof Marry);
+
+        Runnable runnable = new Runnable() {
+            @Override
+            public void run() {
+                System.out.println("pass");
+            }
+        };
+        Runnable runnable1 = ()-> System.out.println("pass");
+
+
     }
 }
 

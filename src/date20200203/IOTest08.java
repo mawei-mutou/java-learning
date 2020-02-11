@@ -1,7 +1,6 @@
 package date20200203;
 
-import java.io.ByteArrayOutputStream;
-import java.io.IOException;
+import java.io.*;
 
 /**
  * created with IntelliJ IDEA
@@ -23,8 +22,13 @@ public class IOTest08 {
             baos.write(datas, 0, datas.length);//从程序中写出来
             baos.flush();
 
+            // 通过toByteArray转化为字节数组
             dest = baos.toByteArray();
+            // 转化为了输入流
+            InputStream inputStream = new ByteArrayInputStream(dest);
+
             System.out.println(new String(dest,0,dest.length));
+
         } catch (IOException e) {
             e.printStackTrace();
         }
