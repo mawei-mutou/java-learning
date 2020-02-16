@@ -22,7 +22,7 @@ public class SpiderTest02 {
         //下载资源
         HttpURLConnection conn = (HttpURLConnection) url.openConnection();
         conn.setRequestMethod("GET");
-        conn.setRequestProperty("");//这里不会找
+        //conn.setRequestProperty("");//这里不会找
         BufferedReader br = new BufferedReader(new InputStreamReader(conn.getInputStream(), "UTF-8"));
 
         String msg = null;
