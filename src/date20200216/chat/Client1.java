@@ -31,8 +31,6 @@ public class Client1 {
             msg = dis.readUTF();
             System.out.println(msg);
         }
-
-
         //释放资源
         dos.close();
         dis.close();

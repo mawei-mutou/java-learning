@@ -34,8 +34,6 @@ public class Chat1 {
             dos.writeUTF(msg);
             dos.flush();
         }
-
-
         //释放资源
         dos.close();
         dis.close();

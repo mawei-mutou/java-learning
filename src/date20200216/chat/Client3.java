@@ -18,7 +18,7 @@ public class Client3 {
     public static void main(String[] args) throws IOException {
         System.out.println("-----------Client----------");
         //1、建立连接
-        Socket client = new Socket("localhost", 8856);
+        Socket client = new Socket("localhost", 8268);
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         DataOutputStream dos = new DataOutputStream(client.getOutputStream());
         DataInputStream dis = new DataInputStream(client.getInputStream());

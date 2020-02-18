@@ -21,7 +21,7 @@ public class Chat3 {
     public static void main(String[] args) throws IOException {
         System.out.println("------Sever------0--");
         //1、指定端口，创建服务器
-        ServerSocket server = new ServerSocket(8856);
+        ServerSocket server = new ServerSocket(8556);
 
         while (true) {
             //2、阻塞式等待连接
