@@ -1,4 +1,4 @@
-package date20200218;
+package date20200220.servlet04;
 
 import java.util.HashMap;
 import java.util.List;
@@ -18,14 +18,14 @@ public class WebUtil {
     public WebUtil() {
     }
 
-    public WebUtil(List<Mapping> mapps, List<Servlet> servlets) {
+    public WebUtil(List<Mapping> mapps, List<Servlet2> servlets) {
         for (Mapping temp : mapps) {
             for (String str : temp.getPatterns()) {
                 map.put(str, temp.getName());
             }
         }
 
-        for (Servlet temp : servlets) {
+        for (Servlet2 temp : servlets) {
             servlet.put(temp.getName(), temp.getCls());
         }
     }

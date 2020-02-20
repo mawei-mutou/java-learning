@@ -131,7 +131,7 @@ public class Chat4 {
 
             while (isRunning) {
                 String mag = receive();
-                System.out.println("收到的msg为："+mag);
+               // System.out.println("收到的msg为："+mag);
 
                 if (!mag.equals("")) {
                         sendOthers(mag,false);

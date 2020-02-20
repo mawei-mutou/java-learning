@@ -13,7 +13,7 @@ import java.lang.reflect.InvocationTargetException;
  * 2、可以动态创建对象
  */
 public class Chapter1101Reflection {
-    public static void main(String[] args) throws ClassNotFoundException, NoSuchMethodException, IllegalAccessException, InvocationTargetException, InstantiationException {
+    public static void main(String[] args) throws ClassNotFoundException, NoSuchMethodException, IllegalAccessException, InvocationTargetException, InstantiationException, NoSuchFieldException {
         //1、一种方式
         Iphone iphone = new Iphone();
         Class clz = iphone.getClass();
@@ -27,6 +27,9 @@ public class Chapter1101Reflection {
 
         //创建对象
         Iphone iphone2 = (Iphone) c1.getConstructor().newInstance();
+
+        c1.getField("name");
+        c1.getMethod("name");
         //Iphone iphone3=(Iphone)c1.get
 //        Iphone iphone2 = (Iphone) clz.getConstructor().newInstance();
 //        System.out.println(iphone2);
