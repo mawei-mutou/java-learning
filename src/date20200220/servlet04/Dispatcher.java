@@ -37,7 +37,7 @@ public class Dispatcher implements Runnable {
         try {
             if (null == request2.getUrl() || request2.getUrl().equals("")) {
                 byte[] datas = new byte[1024 * 10];
-                InputStream is = Thread.currentThread().getContextClassLoader().getResourceAsStream("date20200220/servlet041/error3.html");
+                InputStream is = Thread.currentThread().getContextClassLoader().getResourceAsStream("date20200220/servlet04/error3.html");
                 String str = new String(String.valueOf(is.read(datas, 0, datas.length)));
                 response.print(str);
                 response.pushToBrowser(200);
@@ -49,7 +49,7 @@ public class Dispatcher implements Runnable {
 
                 } else {
                     byte[] datas = new byte[1024 * 10];
-                    InputStream is = Thread.currentThread().getContextClassLoader().getResourceAsStream("date20200220/servlet041/error.html");
+                    InputStream is = Thread.currentThread().getContextClassLoader().getResourceAsStream("date20200220/servlet04/error.html");
                     String str = new String(String.valueOf(is.read(datas, 0, datas.length)));
                     response.print(str);
                     response.pushToBrowser(404);
@@ -58,7 +58,7 @@ public class Dispatcher implements Runnable {
         } catch (IOException e) {
             try {
                 byte[] datas = new byte[1024 * 10];
-                InputStream is = Thread.currentThread().getContextClassLoader().getResourceAsStream("date20200220/servlet041/error2.html");
+                InputStream is = Thread.currentThread().getContextClassLoader().getResourceAsStream("date20200220/servlet04/error2.html");
                 String str = new String(String.valueOf(is.read(datas, 0, datas.length)));
                 response.print(str);
                 response.pushToBrowser(500);

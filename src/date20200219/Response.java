@@ -30,9 +30,9 @@ public class Response {
     public Response(Socket client) {
         this();//它的作用
         try {
-            bw = new BufferedWriter(new OutputStreamWriter(client.getOutputStream()));
-        } catch (IOException e) {
-            e.printStackTrace();
+                bw = new BufferedWriter(new OutputStreamWriter(client.getOutputStream()));
+            } catch (IOException e) {
+                e.printStackTrace();
         }
 
     }

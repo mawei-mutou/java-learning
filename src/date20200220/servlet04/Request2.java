@@ -90,20 +90,22 @@ public class Request2 {
 
     //使用Map对参数进行封装 ,参数格式为：flag=1&flag=2&flag=3&uname=yaodong&pwd=123456&others=
     public void convertMap(String query) {
-        String[] str = query.split("&");
-        for (String parameter : str) {
-            String[] kv = parameter.split("=");
-            kv = Arrays.copyOf(kv, 2);
-            String key = kv[0];
-            String value = kv[1] == null ? null : decode(kv[1], "utf-8");
+        if (query != null) {
+            String[] str = query.split("&");
+            for (String parameter : str) {
+                String[] kv = parameter.split("=");
+                kv = Arrays.copyOf(kv, 2);
+                String key = kv[0];
+                String value = kv[1] == null ? null : decode(kv[1], "utf-8");
 
-            if (!parametersMap.containsKey(key)) {
+                if (!parametersMap.containsKey(key)) {
 
-                List<String> values = new ArrayList<>();
-                values.add(value);
-                parametersMap.put(key, values);
-            } else {
-                parametersMap.get(key).add(value);
+                    List<String> values = new ArrayList<>();
+                    values.add(value);
+                    parametersMap.put(key, values);
+                } else {
+                    parametersMap.get(key).add(value);
+                }
             }
         }
     }

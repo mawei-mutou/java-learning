@@ -48,9 +48,13 @@ public class WebApp {
         System.out.println(cls);
         Class c = null;
         try {
-            c = Class.forName(cls);
-            Servlet servlet = (Servlet) c.getConstructor().newInstance();
-            return servlet;
+            if (cls != null) {
+                c = Class.forName(cls);
+                Servlet servlet = (Servlet) c.getConstructor().newInstance();
+                return servlet;
+            } else {
+                return null;
+            }
         } catch (Exception e) {
             e.printStackTrace();
         }
