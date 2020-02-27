@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<books>
+  <book id="101">
+    <name>English</name>
+    <author>姚东</author>
+    <price>85</price>
+  </book>
+</books>

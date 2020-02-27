@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 引用外部DTD -->
+<!DOCTYPE students SYSTEM "Student.DTD">
+<students>
+    <student id="1">
+        <name>yaodong</name>
+        <course>java</course>
+        <score>89</score>
+    </student>
+    <student id="2">
+        <name>Lisi</name>
+        <course>javascript</course>
+        <score>100</score>
+    </student>
+</students>

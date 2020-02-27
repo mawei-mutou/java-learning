@@ -7,7 +7,7 @@ public class TestInstence {
     }
 
     public static void main(String[] args) {
-//        Student st1 = new Student();
+//        Student.xml st1 = new Student.xml();
 //        System.out.println(st1 instanceof Human);
         new LittleStudent();
     }
@@ -27,7 +27,7 @@ class Human{
 class Student extends Human{
 
     public Student() {
-        System.out.println("Student created");
+        System.out.println("Student.xml created");
     }
     // 子类返回类型的范围 要比父类的小或者等于 且有继承关系
 //    @Override

@@ -15,6 +15,6 @@ public class Demo03 {
         Class<?> c = loader.loadClass("HelloWorld");
         Class<?> c1 = loader.loadClass("HelloWorld");
         Class<?> c2 = loader2.loadClass("HelloWorld");
-        System.out.println(c);
+        System.out.println(c.getClassLoader());
     }
 }
