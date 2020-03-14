@@ -32,10 +32,11 @@ public class Demo04 {
     }
     public static void main(String[] args) throws IOException {
         String str=getURLContents("http://www.163.com","gbk");
-        Pattern p = Pattern.compile("href=\"([\\w\\s./:]+?)\"");
-        Matcher m = p.matcher(str);
-        while (m.find()) {
-            System.out.println(m.group(1));
-        }
+        System.out.println(str);
+//        Pattern p = Pattern.compile("href=\"([\\w\\s./:]+?)\"");
+//        Matcher m = p.matcher(str);
+//        while (m.find()) {
+//            System.out.println(m.group(1));
+//        }
     }
 }
