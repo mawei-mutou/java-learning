@@ -14,15 +14,16 @@ import java.sql.*;
 public class Demo07 {
     public static void main(String[] args) {
         Connection con=null;
+        PreparedStatement ps = null;
+        ResultSet rs = null;
         try {
-            Class.forName("com.mysql.jdbc.Driver");
-            con = DriverManager.getConnection("jdbc:mysql://localhost:3306/huxiaoyang",
-                    "yaodong", "690725");
+            con=JDBCUtils.getMySqlConn();
+            System.out.println(con);
             con.setAutoCommit(false);
 
             //PreparedStatement ps=con.prepareStatement("alter table student add info text not null ");
             //向数据库里面插入一个图像文件
-            PreparedStatement ps=con.prepareStatement("insert into student (id,age,regTime,lastLoginTime,info,head) values (?,15,'2020-03-19',now(),?,?)");
+            ps=con.prepareStatement("insert into student (id,age,regTime,lastLoginTime,info,head) values (?,15,'2020-03-19',now(),?,?)");
             //PreparedStatement ps=con.prepareStatement("insert into student (info,head) values (?,?)");
             ps.setInt(1,101);
            // ps.setClob(2,new FileReader(new File("C:\\Users\\MrYou\\Desktop\\a.txt")));
@@ -33,8 +34,8 @@ public class Demo07 {
 
 
             //从数据库取出Clob数据
-            ps = con.prepareStatement("select * from student where id =102");
-            ResultSet rs = ps.executeQuery();
+            ps = con.prepareStatement("select * from student where id =101");
+           rs = ps.executeQuery();
             while (rs.next()) {
                 Blob  b = rs.getBlob("head");
                 InputStream is = b.getBinaryStream();
@@ -47,7 +48,7 @@ public class Demo07 {
             }
             con.commit();
 
-        } catch (ClassNotFoundException | SQLException | IOException e) {
+        } catch (SQLException | IOException e) {
             e.printStackTrace();
             try {
                 con.rollback();
@@ -55,6 +56,5 @@ public class Demo07 {
                 ex.printStackTrace();
             }
         }
-
     }
 }

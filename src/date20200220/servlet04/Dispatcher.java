@@ -68,7 +68,6 @@ public class Dispatcher implements Runnable {
         }
         release();
     }
-
     public void release() {
         try {
             client.close();
