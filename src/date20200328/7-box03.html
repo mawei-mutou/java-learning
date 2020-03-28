@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>外边距(margin)</title>
+        <style>
+
+
+            /*
+            外边距指的是盒子与其他盒子之间的距离，不会影响可见框的大小，而会影响盒子的位置
+            盒子有四个方向的外边框
+            margin-top
+            margin-right
+            margin-bottom
+            margin-left
+            他们的设定和前面的padding、border类似,可以单独设值，也可一起设值。
+            它可以为负值，为负值时向左边移动，正值向右边移动
+
+            水平方向的还可设值为auto，竖直方向不能用
+            若只指定左边或右边为auto，会将margin值设为最大
+            若同时设左外边距和右外边距为auto则左右外边距会设为相同的值
+             */
+            .d1 {
+                width: 200px;
+                height: 200px;
+                background-color: #abc;
+
+                margin: 20px;
+
+            }
+            .d2 {
+                width: 200px;
+                height: 200px;
+                background-color: #afc;
+
+                margin:0 auto;
+            }
+
+        </style>
+    </head>
+    <body>
+        <div class="d1">这是一个div标签</div>
+        <div class="d2">这是一个div标签</div>
+        <div class="d2">这是一个div标签</div>
+        <div class="d2">这是一个div标签</div>
+        <div class="d2">这是一个div标签</div>
+        <div class="d2">这是一个div标签</div>
+        <div class="d2">这是一个div标签</div>
+1
+
+    </body>
+</html>

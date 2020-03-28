@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>字体的样式</title>
+        <style>
+            .p1 {
+                /**
+                设置字体的颜色，使用color来设置文字的颜色
+                 */
+                color:red;
+
+                /**
+                设置文字的大小，默认的大小为16px
+                font-size并不是文字本身的大小，在页面中每个文字都是处在一个看不见的框中，
+                    我们设置的font-size大小实际是框的大小。文字一般比框小，不同的 字体，显示效果也不一样
+                 */
+
+                font-size: 30px;
+
+                /**
+                通过font-family可以指定文字的字体
+                采用某种字体时，如果浏览器支持则使用该字体，否则使用默认的字体。
+                可以指定多个字体，用，分开，浏览器会优先使用前面的字体，前面的不支持则再一次使用下一个字体
+                 */
+
+                font-family:，arial，微软雅黑;
+
+                /**
+                字体的分类
+                    serif 衬线字体
+                    sans-serif 非衬线字体
+                    monospace 等宽字体
+                    cursive 草书字体
+                    fantasy 虚幻字体
+
+                    可以将字体设置为这些大的分类，当设置为大的分类后，浏览器会自动选择指定的字体并应用样式
+                 */
+
+
+                /**
+                font-style用来设置字体是否为斜体，
+
+                    font-style:normal   默认值，文字正常显示
+                    font-style:italic   文字倾斜
+
+                 font-weight用来设置文本的加粗效果
+                    normal,默认值，正常显示
+                    bold，加粗
+
+
+                 font-variant设置小型大写字母
+                    normal正常
+                    small-caps 文本所有的字母都以大写字母显示，小写字母的大写要比本身就是大写的字母要小一些
+                 */
+
+                /**
+                同一个元素的多个字体样式可以简写，别的可写可不写，顺序也不要求，但是大小和字体必须有，且字体为最后一个，大小为倒数第二个，否则整个样式不会有效。
+                    font: small-caps bold italic 90px "华文彩云"
+                 */
+
+            }
+        </style>
+    </head>
+    <body>
+        <p style="font:small-caps bold italic 50px 华文彩云">这是一个p标签，ABCDEFGabcdefg</p>
+
+        <p class="p1">这是一个p标签，ABCDEFGabcdefg</p>
+        <p style="font-family: serif;font-style: italic;font-weight: bold;font-variant: small-caps">衬线字体ABCDEFGabcdefg</p>
+        <p style="font-family: sans-serif;">衬线字体ABCDEFGabcdefg</p>
+        <p style="font-family: monospace;">衬线字体ABCDEFGabcdefg</p>
+        <p style="font-family: cursive;">衬线字体ABCDEFGabcdefg</p>
+        <p style="font-family: fantasy;">衬线字体ABCDEFGabcdefg</p>
+
+    </body>
+</html>

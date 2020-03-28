@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>清除默认的样式</title>
+        <style>
+
+            /*
+            浏览器为了在页面没有样式时，也可以有一个比较好的显示效果，会为很多的元素设置些默认的margin和padding，而这些正常情况下我们
+            是不需要的。所有往往会把这些默认的样式去掉
+             */
+            * {
+                margin: 0;
+                padding: 0;
+            }
+
+            .i {
+                width: 200px;
+                height: 150px;
+                background-color: red;
+            }
+        </style>
+    </head>
+    <body>
+        <p>这是一个p标签</p>
+        <p>这是一个p标签</p>
+        <p>这是一个p标签</p>
+        <p>这是一个p标签</p>
+
+        <div class="i">
+
+        </div>
+
+        <ul>
+            <li>sdasf</li>
+            <li>sdasf</li>
+            <li>sdasf</li>
+            <li>sdasf</li>
+        </ul>
+    </body>
+</html>

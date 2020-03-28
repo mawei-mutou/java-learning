@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>内联元素的盒子</title>
+        <style>
+            * {
+                margin: 0;
+                padding 0;
+
+            }
+            /*
+            内联元素不能设置width和height
+            外边距:左右可以设置,且不会重叠，垂直方向不能
+            边框：可以设置，但不会影响页面垂直方向布局，可以影响水平方向
+            内边距:只能水平方向的设置
+
+             */
+            .a {
+                /*margin-left: 100px;;*/
+                /*margin-right: 100px;*/
+                /*margin-bottom: 100px;*/
+                /*margin-top: 100px;*/
+                /*border: 100px green solid;*/
+                /*padding-left: 100px;*/
+                /*padding-right: 100px;*/
+
+                padding-bottom: 100px;
+                padding-top: 100px;
+
+            }
+            .b {
+                /*margin-left: 100px;;*/
+                /*margin-right: 100px;*/
+            }
+
+            div {
+                width: 100px;
+                height: 100px;
+                background-color: red;
+
+            }
+        </style>
+    </head>
+    <body>
+        <span class="a">这是一个span标签</span>
+        <span class="b">这是一个span标签</span>
+        <span>这是一个span标签</span>
+        <span>这是一个span标签</span>
+
+        <div>
+
+        </div>
+    </body>
+</html>

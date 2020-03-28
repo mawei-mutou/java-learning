@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>样式继承</title>
+
+    </head>
+    <body>
+       <!--
+        在css中，祖先元素上的样式会被它的 后代元素所继承
+        利用继承，可以将一些基本的样式设置给祖先元素，这样所有的后代元素都会自动继承这些样式
+
+        但是并不是所有的样式都会被子元素所继承，比如：背景相关的样式都不会被继承 边框相关的样式也不会被继承
+       -->
+        <div style="background-color: yellow;color:green;">
+            <p>
+            这是p标签的内容<br>
+            <span style="background-color: red;">这是p标签内的span标签中的内容</span>
+            </p>
+        </div>
+
+    </body>
+</html>

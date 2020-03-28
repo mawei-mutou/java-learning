@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>not选择器</title>
+        <style>
+            /**
+            为所有的p元素设置一个背景颜色为黄色除了class值为hello的
+
+            否定伪类：
+                作用：可以从选中的元素中踢出某些元素
+               语法：
+                    :not(选择求)
+             */
+
+            p:not(.hello) {
+                color:red;
+                font-size: 20px;
+            }
+
+            p:not(:first-child) {
+                color:green;
+            }
+        </style>
+    </head>
+    <body>
+        <p>这是一个p标签</p>
+        <p>这是一个p标签</p>
+        <p class="hello">这是一个p标签</p>
+        <p>这是一个p标签</p>
+        <p>这是一个p标签</p>
+        <p>这是一个p标签</p>
+    </body>
+</html>

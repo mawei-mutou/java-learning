@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>overflow</title>
+        <style>
+            /**
+            子元素原则上不能超过父元素的大小，但实际上可以超过，超过部分在默认父元素以外的地方显示,但不占据位置
+            可以通过overflow去设置父元素对子元素的显示
+            值：
+                auto：自动选择是否需要滚动
+                hidden:超出部分隐藏
+                scroll：设置滚动
+
+             */
+
+            .box1 {
+                width: 300px;
+                height: 300px;
+                background-color: red;
+                /*overflow: auto;*/
+
+                /*overflow: hidden;*/
+                overflow: scroll;
+            }
+            .box2 {
+                width: 500px;
+                height: 500px;
+                background-color:green;
+            }
+
+            .bb {
+                width: 100px;
+                height: 100px;
+                background-color: yellow;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="box1">
+            <div class="box2">台湾确诊病患的增速虽然较慢，但是基本每日仍有新增确诊患者的出现。如今台湾的确诊病例已达200多人。
+                这200多人的确诊病例看起来虽然不多，却凸显出民进党当局的防疫工作是何等不到位。因此一种人人自慰的情绪开始在台湾民众中蔓延开来，许多台湾民众为了自保也开始行动起来，前往各大超市进行抢购，许多超市都被一扫而空，对此蔡英文已紧急公开向民众喊话，保证当局会完备物资，请民众勿恐慌、囤积，但民众焦虑心情似乎尚未平息，抢购风潮仍一波波。</div>
+        </div>
+
+        <div class="bb">
+
+        </div>
+    </body>
+</html>

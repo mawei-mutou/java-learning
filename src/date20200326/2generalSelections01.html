@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>选择器</title>
+        <style>
+            /**
+            为页面中所有的p元素设置一个样式
+          元素选择器：作用：通过元素选择器可以选择页面中的所有指定元素
+          语法：标签名 {}
+             */
+
+            p{
+                color:red;
+            }
+
+            h1{
+                color:black;
+            }
+
+            /**
+            id选择器：
+            通过元素的id属性值选中唯一的一个元素/
+            语法：#id属性值{}
+             */
+
+            #p1 {
+                color: yellow;
+                font-size: 20px;
+                /*background-color: green;*/
+                width: 200px;
+            }
+
+            /**
+            类选择器
+                -通过元素的class属性值选中一个元素
+                -语法：
+                    .class属性值{}
+             */
+
+            .p2 {
+                color: blue;
+                font-size: 50px;
+            }
+
+            #m {
+                color: yellow;
+
+            }
+
+
+
+            /**
+            同时为id为p1的元素，class为p2的元素，还有h1
+            同时设置一个背景颜色为黄色
+
+            选择器分组
+                -通过选择器分组可以同时选中多个选择器对应的元素
+                -语法：选择器1,选择器2,选择器N{}
+             */
+
+            h1,#p1,.p2{
+                background-color:green;
+            }
+
+            /**
+            通配选择器
+                -可以选择页面中的所有元素
+                -语法：*{}
+             */
+
+            *{
+                color:yellow;
+            }
+
+
+            /**
+            为拥有class 为p3的span元素设置一个背景颜色为黑色
+
+            复合选择（交集）
+             -可以选中同时满足多个选择器的元素
+             -语法：选择器1选择器2选择器3    多个选择器紧密挨着即可
+             */
+
+            span.p3{
+                color:black;
+            }
+        </style>
+
+    </head>
+    <body>
+        <h1>悯农</h1>
+        <p>锄禾日当午</p>
+        <p>锄禾日当午</p>
+        <p id="p1">锄禾日当午</p>
+
+        <!--
+            我们可以为元素设置class属性，
+                class属性和id属性类似，只是class属性可以相同。
+                class属性相同的元素为一组元素
+
+                可以同时给一个元素设置多个class属性值，多个值之前使用空格隔开；
+        -->
+        <p>锄禾日当午</p>
+        <p>锄禾日当午</p>
+        <p class="p2 hello hahaah">锄禾日当午</p>
+        <p id="m" class="p2">锄禾日当午</p>
+        <p class="p2">锄禾日当午</p>
+        <p class="p2">锄禾日当午</p>
+        <p class="p3">锄禾日当午</p>
+
+        <span class="p3">汗滴禾下土</span>
+    </body>
+</html>

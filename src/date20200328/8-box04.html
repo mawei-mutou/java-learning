@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>垂直外边距的重叠</title>
+        <style>
+            /**
+            垂直外边距的重叠
+                - 在网页中垂直方向的相邻外边距会发生重叠
+                发生重叠时，外边距取二者中的较大值
+
+
+             */
+            .b {
+                width: 100px;
+                height: 100px;
+                background-color: red;
+                margin-bottom: 100px;
+
+            }
+            .e {
+                width: 100px;
+                height: 100px;
+                background-color: green;
+                margin-top: 50px;
+            }
+
+                /*
+                这里的a和d外边距仍然时垂直相邻，仍然会重叠
+
+                取出重叠的方法时在之间添加别的东西，比如给a元素添加一个边框border或内边距padding
+
+                 */
+            .a{
+                width: 200px;
+                height: 190px;
+                background-color: yellow;
+                border-top: yellow solid;
+            }
+            .d{
+                 width: 50px;
+                 height: 50px;
+                 background-color: greenyellow;
+                margin-top: 140px;
+
+             }
+
+            /*.f{*/
+            /*    width: 50px;*/
+            /*    height: 50px;*/
+            /*    background-color: fuchsia;*/
+            /*}*/
+        </style>
+    </head>
+    <body>
+        <div class="a">
+            <div class="d"></div>
+            <div class="f"></div>
+        </div>
+        <div class="b"></div>
+
+        <div class="e"></div>
+
+    </body>
+</html>

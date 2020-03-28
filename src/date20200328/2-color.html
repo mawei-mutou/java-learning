@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>颜色单位</title>
+        <style>
+            /**
+            颜色单位：
+                在CSS可以直接使用颜色的单词来表示不同的颜色
+                    红色： red
+                    蓝色； blue
+                    绿色： green
+                  也可以使用RBGB值来表示不同的颜色
+                    -RGB值指的是通过Red，Green，Blue三元色
+                        通过这三种颜色的不同浓度，表示不同的颜色
+                    - 例子：reg（红的浓度，绿色的浓度，蓝色的浓度）
+                            - 颜色的浓度需要一个0-255之间的值，255表示最大，0表示没有
+                            - 浓度也可以采用一个百分数来设置，需要一个0%-100%之间的数字
+                                使用百分数最终会转变成0-255之间的数
+                                0%表示0，100%表255
+
+
+                    也可以使用十六进制的rgb值表示颜色，原理和上面的一样，只不过使用的是十六进制的数。
+                    语法： #红色绿色蓝色
+                        background-color：#ff0000
+             */
+            /*.col {*/
+            /*    background-color: rgb(161, 187, 215);*/
+            /*    width: 50px;*/
+            /*    height: 50px;*/
+            /*}*/
+
+            /*.col {*/
+            /*    background-color: rgb(100%, 50%, 50%);*/
+            /*    width: 50px;*/
+            /*    height: 50px;*/
+            /*}*/
+            .col {
+                background-color:#EDD21E;
+                width: 50px;
+                height: 50px;
+            }
+
+        </style>
+    </head>
+    <body>
+        <div class="col"></div>
+    </body>
+</html>

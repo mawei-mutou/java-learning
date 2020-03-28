@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>css</title>
+        <!--
+        内部样式表
+            也可以将css样式编写到head中的style标签中，type="text/css"是一个默认的值,然后通过css选择器选中指定的元素
+        然后可以给这些元素一起设置样式，推使用的方式。
+        -->
+        <style type="text/css">
+            p {
+                color: red;
+                font-size: 25px;
+            }
+        </style>
+    </head>
+    <body>
+        <!--
+            可以将css样式编写到元素的style属性当中，
+            将样式直接编写到style属性中，这种样式叫内联样式
+            内联样式只对当前的元素内容起作用，内联样式不方便复用
+            内联样式属于结构与表现耦合，不方便后期的维护，不推荐使用
+                    <p style="color:red;font-size: 40px">锄禾日当午，汗滴禾下土</p>
+
+        -->
+        <p>锄禾日当午，汗滴禾下土</p>
+        <p>锄禾日当午，汗滴禾下土</p>
+        <p>锄禾日当午，汗滴禾下土</p>
+        <p>锄禾日当午，汗滴禾下土</p>
+        <p>锄禾日当午，汗滴禾下土</p>
+
+
+    </body>
+</html>

@@ -235,7 +235,7 @@ public abstract class Query implements Cloneable {
      * @return 查询的数字
      */
     public Number queryNumber(String sql, Object[] params){
-        return (Number) queryValues(sql, params);
+        return (Number)queryValues(sql, params);
     }
 
     @Override

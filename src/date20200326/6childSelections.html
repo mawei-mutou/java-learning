@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>子元素选择器</title>
+        <style>
+            /**
+            为 第一个p 标签设置一个背景颜色为黄色
+                ：first-child 可以选中第一个一个子元素
+                :last-child 可以选中最后一个子元素
+                ：nth-child(n) 可以选中位置为n的子元素
+                ：nth-child(even)选中所有偶数位置的子元素
+                :nth-child(odd)选中所有奇数位置的子元素
+             */
+
+
+            p:first-child {
+                background-color: yellow;
+            }
+
+            body>p:first-child {
+                background-color: red;
+            }
+
+            p:nth-child(5) {
+                color: blue;
+            }
+
+            /**
+           :first-of-type
+           :last-of-type
+           :nth-of-type
+
+           和上面的类似，只不过这是在当前类型的 子元素中排列
+            */
+            p:first-of-type {
+                font-size: 20px;
+            }
+        </style>
+    </head>
+    <body>
+        <span>这里是一个span标签</span>
+        <p>这是一个p标签</p>
+        <p>这是一个p标签</p>
+        <p>这是一个p标签</p>
+        <p>这是一个p标签</p>
+        <p>这是一个p标签</p>
+        <p>这是一个p标签</p>
+
+        <div>
+            <p>这是一个在div里面的p标签</p>
+        </div>
+    </body>
+</html>

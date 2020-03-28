@@ -30,6 +30,7 @@ public class MySqlQuery extends Query{
             System.out.println(y.getName());
         }
     }
+
     public static void main(String[] args) {
         Object obj = new MySqlQuery().queryValues("select count(*) from yao3 where age>?", new Object[]{10});
         System.out.println((Number)obj);

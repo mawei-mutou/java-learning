@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>display</title>
+        <style>
+            a {
+                /*
+                display可以修改元素的类型
+                可选值：
+                    none不显示，也不占据位置
+                    inline内联元素显示
+                    block块元素显示
+                    inline-block:将一个元素既有行内元素的特点又有块元素的特点，既可以设置宽高又不会独占一行
+
+                    比如里的a元素本身是内联元素，但可以将他以块元素类型显示
+                    这样a元素就有块元素的性能
+                 */
+                /*display: none; */
+
+
+                display: inline-block;
+                width: 100px;
+                height: 100px;
+                background-color:#EDD21E;
+            }
+
+            /*
+            visibility可以用来设置元素的隐藏和显示的状态
+             可选值：
+             visible:默认值，可见
+             hidden：不可见，并且占据位置
+             */
+
+            .pp {
+                width: 100px;
+                height: 100px;
+                background-color:orange;
+                visibility: hidden;
+            }
+        </style>
+    </head>
+    <body>
+        <a href="#">这是一个大大的超链接</a>
+        <span>你好啊！</span>
+
+        <div class="pp">这是一个div标签</div>
+        <span>你好啊！</span>
+
+    </body>
+</html>

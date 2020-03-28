@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>实体</title>
+</head>
+<body>
+<!--
+    在HTML中，一些<>中特殊字符是不能直接使用的。
+    需要使用特殊的符号来表示这些字符,这些特殊的符号叫做实体（转移字符）
+  浏览器解析到实体时，会自动将实体转换为对于的字符
+   eq相等   ne不相等，   gt大于， lt小于  ge大于等于   le 小于等于   not非   mod求模   is [not] div by是否能被某数整除   is [not] even是否为偶数   is [not] even by $b即($a / $b) % 2 == 0   is [not] odd是否为奇   is not odd by $b即($a / $b) % 2 != 0 示例：
+
+equal/ not equal/ greater than/ less than/ less than or equal/ great than or equal/后面的就不用说了
+  实体语法：
+        可以去文档里面去看所有的实体
+  比如：a<b>c写为：a&lt;b&gt;c
+  &实体的名字;
+  <  &lt;
+  >  &gt;
+  空格 &nbsp;可以写多个，但是不会换行，这时浏览器不会默认解析为一个空格
+-->
+a&ne;5
+a&lt;b&gt;c
+
+<p>
+    <1>今天是&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;个好天气。处处春风和煦
+</p>
+</body>
+</html>

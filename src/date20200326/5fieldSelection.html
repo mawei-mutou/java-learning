@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>属性选择器</title>
+        <style>
+            /**
+            为所有具有title属性的p元素，设置一个背景颜色为黄色
+                属性选择器
+                    -作用：可以根据元素的属性或属性值来选取指定的元素
+                    -语法：
+                        [属性名] 选取含有指定属性的元素
+                        [属性名="属性值"] 选取指定属性值的元素
+                        [属性名^="属性值"] 选取属性值以指定内容开头的元素
+                        [属性名$="属性值"] 选取属性值以指定内容结尾的元素
+                        [属性名="属性值"] 选取属性值以指定内容的元素
+
+             */
+            p[title] {
+                color:red;
+            }
+
+            p[id] {
+                color:green;
+            }
+
+            p[class="aa"] {
+                background-color: blue;
+            }
+
+            p[class^="aa"] {
+                color:red;
+            }
+        </style>
+    </head>
+    <body>
+        <!--
+            title属性，这个属性可以给仍和标签指定
+                当鼠标移入到元素上时，元素中的title属性的值将会作为提示文字显示
+        -->
+        <p title="hello">这里时一个p标签</p>
+        <p title="nihao">这里时一个p标签</p>
+        <p class="aa">这里时一个p标签</p>
+        <p id="s">这里时一个p标签</p>
+        <p class="pp aa">这里时一个p标签</p>
+        <p id="b">这里时一个p标签</p>
+        <p>这里时一个p标签</p>
+        <p>这里时一个p标签</p>
+    </body>
+</html>

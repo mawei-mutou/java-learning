@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>伪类选择器</title>
+        <style>
+            /**
+            伪类专门用来表示元素的一种特殊的状态
+            比如：访问过的超链接，比如普通的超链接，比如获取焦点的文本框
+            当我们需要为这些特殊状态的元素设置样式时，就可以使用伪类
+             */
+
+            /**
+
+            这是四个的优先级相同，但是在写的时候,要按下面的顺序写。
+            hover必须在active前，link和visited必须在hover前
+
+                link
+                visited
+                hover
+                active
+            为未访问过的链接设置一个颜色为绿色
+             ：link
+                -表示普通的链接（没访问过的链接）
+             */
+            a:link{
+                color:green;
+            }
+
+            /**
+            为访问过的链接设置一个颜色为红色
+                ：visited
+                    -表示访问过的链接
+
+                    浏览器是根据历史记录判断一个链接是否访问过
+                     由于涉及到用户的隐私问题，所有使用visited伪类只能设置字体的颜色。
+
+             */
+
+
+            a:visited{
+                color:red;
+                background-color:yellow;
+            }
+
+            /**
+            :hover伪类表示鼠标移入的状态
+             */
+            a:hover{
+                color:skyblue;
+            }
+
+            /**
+            :active 表示的时超链接被点击的状态
+             */
+            a:active{
+                color:black;
+            }
+            /**
+            :hover和:active伪类也可以为其他元素设置，比如p元素
+            IE6中，不支持对超链接一歪的元素设置：hover和：active
+             */
+            p:hover {
+                color: skyblue;
+                font-size: 20px;
+            }
+
+            p:active{
+                color:slateblue;
+                font-size:20px;
+            }
+
+
+            /**
+            文本框获取焦点以后，修改颜色为绿色
+             */
+            input{
+                color:green;
+            }
+
+            /**
+            为标签中选中的内容使用样式
+            可以使用：selection伪类
+            注意：这个伪类在火狐中需要采用另一种方式编写：-moz -selection
+             */
+
+            p::-moz-selection{
+                background-color:orange;
+            }
+
+            p::selection{
+                background-color:orange;
+            }
+        </style>
+    </head>
+    <body>
+        <a href="http://www.baidu.com">访问过的链接</a>
+        <br><br>
+        <a href="http://www.baidu123456.com">没有访问过的链接</a>
+        <p>:hover和:active伪类也可以为其他元素设置，比如p元素</p>
+        <!--使用input标签可以创建一个文本输入框-->
+        <input type="text">
+    </body>
+</html>
