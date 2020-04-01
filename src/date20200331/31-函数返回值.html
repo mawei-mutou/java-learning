@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <script>
+            /**
+             * 创建一个函数，用来计算三个数的和
+             * 可以使用return返回函数值，可以顶一个变量取保存它
+             * return后面的语句不会再执行
+             * 若return后不跟值，则函数相当于返回一个undefined，没有return语句函数也是返回一个undefined
+             * return 可以返回任意类型的值
+             *
+             */
+            function sum(a, b, c) {
+                var d = a + b + c;
+                return d;
+                aler("这里是不会出来的");
+            }
+
+            var result = sum(3, 5, 2);
+            console.log(result);
+
+
+            function sum2(a, b, c) {
+                var d = a + b + c;
+                // return ;
+                alert("这里是不会出来的");
+            }
+
+            var result = sum2(3, 5, 6);
+            console.log(result);
+
+        </script>
+    </head>
+    <body>
+        
+    </body>
+</html>

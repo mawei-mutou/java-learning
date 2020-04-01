@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <script>
+            /*
+          将别的数据类想转换为Number
+              方式一：
+                   使用Number（）函数
+                   -字符串-->数字
+                        1、如果是纯数字字符串，则直接将器转换为数字，
+                        2、如果字符串中有非数字的内容，则转换成NaN
+                        3、如果字符串为空串或者签设空格的字符串转换为0
+                    布尔转成Number
+                    true转为1
+                    false转为0
+
+                    NUll 转为0
+
+                    undefined 转为0；
+
+
+
+                 方式二：
+                    -parseInt()把一个字符串转变为整数，它可以将一个字符串中的有效数字取出转变为整数
+                    -parseFloat()把一个字符串转变为浮点数
+
+                    如果是别的类型使用这两个函数，则它会先将其转为string，再进行转换
+           */
+
+            var d = "1235.58.785415";
+            d = parseFloat(d);
+            console.log(typeof d,d);
+            // console.log(d);
+            //
+            // d= Number(d);
+            // console.log(typeof d);
+            // console.log(d);
+            //
+            //
+            // var a = false;
+            // a = parseInt(a);
+            // console.log(typeof a, a);
+
+
+
+        </script>
+    </head>
+    <body>
+        
+    </body>
+</html>

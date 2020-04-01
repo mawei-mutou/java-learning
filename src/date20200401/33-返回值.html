@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <script>
+            /**
+             * 函数返回值可以是任意的数据类型
+             */
+            function fun() {
+                function fun1() {
+                    alert("警告！！！");
+                }
+                return fun1;
+            }
+
+            var a = fun();
+            a();//这相当于 fun1()
+            fun()();//这也相当于 fun1(),只是没有将函数的返回值赋给一个变量而已
+            console.log(a)
+
+        </script>
+    </head>
+    <body>
+        
+    </body>
+</html>

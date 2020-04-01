@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <script>
+            //创建对象的两种方法
+
+            //第一种
+            var obj = new Object();
+
+            //第二种使用对象字面量创建,即直接使用大括号即可
+            var obj2 = {};
+            obj2.name = "悟空";
+
+            //也可以直接在创建对象的时候给它添加属性，多个属性之间用逗号隔开
+            var obj3={
+                name:"悟空",
+                age:500,
+                gender: "男",
+                test:{describe: "大括号里面的相当于一个整体，把它赋值给test属性"}
+            }
+
+
+            console.log(obj3.name);
+            console.log(obj3.test);
+
+        </script>
+    </head>
+    <body>
+        
+    </body>
+</html>

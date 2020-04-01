@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <script>
+            /**
+             * slice(a,b)   [a,b)
+             *  -可以用来从数组中提取指定的元素，他不会改变原数组
+             *  -参数：
+             *      1、截取开始的位置 a
+             *      2、截取结束的位置b
+             *
+             * 第二个参数可以不写，则时从开始元素一直取到数组结尾处
+             *      将截取的元素保存在新的数组中返回
+             */
+
+            var arr = ["孙悟空", "猪八戒", "沙和尚","唐僧", "蜘蛛精", "白骨精"];
+
+            var result = arr.slice(0,2);
+            for (var i = 0; i < result.length; i++) {
+                console.log(result[i]);
+            }
+            var result2 = arr.slice(3);
+
+            for (var i = 0; i < result2.length; i++) {
+                console.log(result2[i]);
+            }
+        </script>
+    </head>
+    <body>
+        
+    </body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <script>
+            /**
+             * 条件分支语句
+             * switch语句
+             * switch(表达式){
+             *     case 表达式：
+             *      执行语句；
+             *      break；
+             * }
+             *
+             * 他会将表达式的值和case中的值进行全等比较，而不是单纯的做等于比较，不会进行自动的类型转换。
+             */
+
+            var num = 3;
+            switch (num) {
+                case 4:
+                    alert("值为4");
+                    break;
+                case 3:
+                    alert("值为3");
+                    break;
+                default:
+                    alert("别的值");
+            }
+
+
+            var score=69;
+            switch (parseInt(score / 10)) {//在java里面若score为整数，score/10 结果会自动处理为整数
+                case 10:
+                case 9:
+                case 8:
+                case 7:
+                case 6:
+                    alert("成绩合格");
+                    break;
+            }
+
+            //和java不同之处
+            switch (true) {//在java里面若score为整数，score/10 结果会自动处理为整数
+                case score/10 >=6:
+                    alert("成绩合格");
+                    break;
+            }
+        </script>
+    </head>
+    <body>
+        
+    </body>
+</html>

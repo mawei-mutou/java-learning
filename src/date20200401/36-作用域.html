@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <script>
+            /**
+             * 作用域
+             *  在JS中一共有两种作用域
+             *      1、全局作用域
+             *          - 直接编写在script标签中的JS代码，都在全局作用域
+             *          -全局作用域在页面打开时创建，在也面关闭时销毁
+             *          - 在全局作用域中有一个全局对象 window
+             *              它代表的时一个浏览器的窗口，它有浏览器创建我们可以直接使用
+             *
+             *              变量声明的提前：
+             *                      使用var关键字声明的变量，会在;soy的代码执行前被声明（但不会被赋值）
+             *                          但是在声明变量时不使用var关键字，则变量不会声明提取
+             *
+             *               函数声明提前：
+             *                      使用function fun（）{}；这种形式创建的函数会在所有代码执行前创建，因此无论它写在何处，都可以提前使用
+             *
+             *                      但使用 var fun=function (){} 这种形式创建的函数是不会被提前创建的，创建前不能使用
+             *      2、函数作用域
+             */
+            // var a = 10;//这样声明的变量都是window的属性
+            // var b=20;
+            // console.log(a);
+            // console.log(window.a);
+            //
+            // function fun() {
+            //     console.log("我是fun函数");
+            //     var e = "w";//函数内部声明的e作用域仅在函数内部能使用
+            // }
+            //
+            // // console.log(e);//不能使用对象内部声明的变量
+            //
+            // window.fun();//这和下面的是一个意思，调用了 window的一个方法
+            // fun();
+            // console.log(c);//提取引用c变量
+            // // console.log(d);//这里提前使用d会报错
+            //
+            // var c=50;//c变量使用了var关键字声明，所有它会在所有代码执行前被声明，因此在33行之前可以引用，只是在之前引用会时值undefined，在33行才会被赋值
+            //
+            // d=50;//不使用var关键字,也相当于 window.d = 50，但不会被提前声明，提前使用会报错
+
+            //可以提前使用
+            // fun2();//不能提前使用
+
+            fun2();
+
+            var fun1 = function () {
+                console.log("这里的 函数不会提前创建，不能提前使用");
+
+            };
+
+            function fun2() {
+                console.log("这里的函数会提前创建，可以提前使用");
+            }
+        </script>
+    </head>
+    <body>
+        
+    </body>
+</html>

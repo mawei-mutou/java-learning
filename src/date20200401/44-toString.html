@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <script>
+            function Person(name, age, gender) {
+                this.name=name;
+                this.age = age;
+                this.gender = gender;
+
+                Person.prototype.toString=function () {
+                    return "Person " + this.name + " " + this.age + " " + this.gender;
+                }//重写了toString方法
+            }
+
+            var p = new Person("孙悟空", 28, "男");
+
+            console.log(p);//返回值为：[object Object]，它默认调用了toString
+            console.log(p.toString());//和上面是一个意思
+
+            //查看toString方法在哪
+            console.log(p.__proto__.hasOwnProperty("toString"));//false
+
+            console.log(p.__proto__.__proto__.hasOwnProperty("toString"));//true,也就是Object中定义了toString，我们可以修改已有的方法或者属性，这样在使用的时候就会使用我们自己定义的
+
+        </script>
+    </head>
+    <body>
+        
+    </body>
+</html>

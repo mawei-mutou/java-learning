@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <script>
+            /**
+             * break跳出当前循环，只会跳出离他最近的那一层循环。continue 会结束当前循环，不执行当前循环的后面的代码，而进行下一次循环
+             *
+             * 与java有所不同的是可有给一个循环加一个标签，在使用break时可以加上这个标签则可以关闭指定的循环
+             */
+
+            outer:
+            for (var i = 0; i < 5; i++) {
+                document.write(i+"外部循环");
+                for (var j = 0; j <= 5; j++) {
+                    document.write(j+"内部循环")
+                    if (i == 1) {
+                        break outer;
+                    }
+                }
+                document.write("<br>");
+
+            }
+        </script>
+    </head>
+    <body>
+        
+    </body>
+</html>

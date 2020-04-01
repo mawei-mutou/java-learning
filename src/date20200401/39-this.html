@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <script>
+            /**
+             * 这个隐含的参数就是this，this指向的是一个对象
+             * 谁调用的这个函数，this就指向那个对象
+             */
+            var name = "全局";
+            function fun() {
+                console.log(this);
+            }
+
+            fun();//这里其实是window对象调用了fun函数，所有this指向的是window对象
+
+            var obj1 ={
+                name: "孙悟空",
+                age:18,
+                sayName:fun,
+                sayName2:fun2
+            }
+
+            obj1.sayName();//此时this指向的是obj1 对象
+
+            function fun2() {
+                console.log(this.name);
+            }
+
+            fun2();//结果为“全局”
+
+            obj1.sayName2();//结果为 “孙悟空”
+
+        </script>
+    </head>
+    <body>
+        
+    </body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <script>
+            /*逻辑运算符
+            ！ 非
+                取反
+            && 与
+                    交集
+            || 或
+                    并集
+
+
+                    在JS中可以对非Boolean类型做bool运算，
+                        || 第一个为true 返回第一个，否则返回第二个
+                        && 第一个为true，返回第二个，否则返回第一个
+
+             */
+
+            var a=true;
+
+            a=5//对于非boolean类型的会先将其转变为Boolean，在进行运算，可以对任一个数据类型做两次非运算，可将其转换为boolean类型
+            document.write(!a);
+
+            var g = false || alert("看完出版");
+
+
+            var re="你好"||6;//都为真是返回后面的一个,这和java不一样
+           // var res=2&&0;//一个flase一个true的返回flase，两个都是false返回前一个
+            document.write("\n"+re,typeof re);
+        </script>
+    </head>
+    <body>
+        
+    </body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <script>
+            /*
+            相等运算符
+                用来比较两个值是否真的相等，事返回true，否则返回false
+                符号为 ==
+
+            不相等
+                符号！=
+
+
+             全等：
+                ===
+                判断两个值是否全等，他和相等类似，不同在于它不会做自动类型转换。
+                两个类型不同直接返回false；
+
+             不全等
+                ！==
+             */
+
+            document.write(1 == 1);//true
+             var a=4;
+            document.write(a == 4);//true
+
+            document.write(a == "4");//这里先将 "4" 转换成数字4，和别的关系运算符相似
+
+            document.write(true == "hellow");//这里将true转换为数值1,字符串也转变为数值类型
+            document.write(true == '8');//这里为false
+
+            document.write(null == 0);//false
+
+            var b = Number(null);
+            console.log(b);
+            /*
+            undefined衍生至null，所有这两个值比较为ture
+
+             */
+
+            document.write(null == undefined);//true
+
+            //NaN不和任何值相等，包括它本身
+
+            document.write(NaN == NaN);
+
+            //半段b是否为NaN,用isNaN(),是返回true,不是返回false
+            var b=NaN;
+            document.write(isNaN(b));
+
+            document.write(NaN != NaN);
+
+            document.write(123 == "123");//true
+            document.write(123 === "123");//false
+            console.log(123 !== "123");
+
+
+
+        </script>
+    </head>
+    <body>
+        
+    </body>
+</html>

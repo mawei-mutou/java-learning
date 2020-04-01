@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <script>
+
+            // var arr = ["孙悟空", "猪八戒", "沙和尚"];
+            //
+            // //遍历数组
+            // for (var i = 0; i < arr.length; i++) {
+            //     console.log(arr[i]);
+            // }
+
+            //练习,创建一个函数从数组arr中将年龄大于等于18岁的人保存在新的数组中并返回该数组
+
+            var Person = function (name, age) {
+                this.name=name;
+                this.age=age;
+            };
+
+            Person.prototype.toString = function () {
+                return this.name + ":  " + this.age + "岁。";
+            };
+
+            var p1 = new Person("唐僧", 26);
+            var p2 = new Person("孙悟空", 15);
+            var p3 = new Person("唐僧", 7);
+            var p4 = new Person("沙和尚", 32);
+            var p5 = new Person("白骨精", 28);
+
+            var arr = [p1, p2, p3, p4, p5];
+
+            function getAdult(a) {
+                var arrNew = [];
+                for (var i = 0; i < a.length; i++) {
+                    if (a[i].age >= 18) {
+                        arrNew.push(a[i]);
+                    }
+                }
+                return arrNew;
+            }
+
+            console.log(getAdult(arr).length)
+
+            for (var i = 0; i < getAdult(arr).length; i++) {
+                console.log(getAdult(arr)[i].toString());
+            }
+
+
+            /**
+             *  也可以使用forEach()遍历数组，只支持IE8以上的浏览器
+             *  forEach()方法需要一个函数作为参数
+             *   -  像这种函数由我们创建但不由我们调用的函数称为回调函数
+             *
+             *
+             *   数组中有几个元素就会执行几次，每次执行时，浏览就会将遍历的元素以实参的形式传递进来
+             *
+             *   浏览器会在回调函数中传递三个参数：
+             *      第一个参数：就是当前正在遍历的元素
+             *      第二个参数：就是当前正在遍历的元素的索引
+             *      第三个参数：就是当前正在遍历的数组
+             */
+
+            arr.forEach(function (value,index,obj) {
+                console.log("a="+value, "   位置为" + index + "   " + obj);
+            });
+
+        </script>
+    </head>
+    <body>
+        
+    </body>
+</html>

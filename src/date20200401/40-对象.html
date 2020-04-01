@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <script>
+            /**
+             * 使用工厂方法创建对象
+             */
+
+            //通过该方法大量生产对象
+            function createPerson(name, age, gender) {
+                var obj ={
+                    name: name,
+                    age:age,
+                    gender:gender,
+                    sayYouself: function () {
+                        console.log(this.name);
+                    }
+                }
+                alert(obj.name + "    " + obj.gender + "    " + obj.age);
+                return obj;
+            }
+
+            var obj1 = createPerson("孙武晒", 18, "男");
+            var obj2 = createPerson("沙赫塞", 28, "男");
+            var obj3 = createPerson("白骨精", 228, "女");
+
+            obj1.sayYouself();
+            obj2.sayYouself();
+            obj3.sayYouself();
+
+
+        </script>
+    </head>
+    <body>
+        
+    </body>
+</html>

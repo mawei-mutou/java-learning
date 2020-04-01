@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <script>
+            /**
+             * 函数作用域
+             *  -调用函数时创建函数作用域，函数执行玩就销毁
+             *  - 每调用一次函数就会创建一个新的函数作用域，他们之间是相互独立的
+             *  - 函数作用域中可以使用全局作用域的变量
+             *  -全局作用域中不能访问函数作用域内的变量
+             */
+
+            var a=19;
+
+            function f() {
+                console.log(a);//肯定时19，相当于window.a
+            }
+
+            function fun() {
+                console.log(window.a);//可以访问全局中的变量，这里的a
+                console.log(a);//这里为undefined
+                var a=20;
+                console.log(a);//会先在自身作用域中寻找a，若没有则向上一级作用域中去寻找a，依次类推。所有这里的a为20
+                // var b=20;
+            }
+
+            fun();
+
+            // console.log(b);//不能访问函数作用域的变量
+
+            //在函数中也有声明提前
+
+            function fun3() {
+
+                console.log(a);//此时由于fun3中有a，它必然是fun3中的a，但由于赋值语句在后，因此fun3函数执行时，会首先声明var a;赋值语句在后面，依次为undefined
+                var a=40;
+            }
+            fun3();
+
+
+            var c=30;
+
+            function fun4() {
+                console.log(c);//没有43行时这里肯定时30，有了就是undefined
+                // var c =10;//有它后，上一行的结果就是undefined，这个c为函数内部的变量
+                c=100;//若在函数中不适用var 关键字创建变量，则创建的变量为window对象的，因此此时fun4内部没有c变量，console.log(c)结果为30
+                // //         //  但是它却时将外部的c的值修改为100；
+                // d = "你好";//同意这里创建的d也是window对象的，在函数外部可以使用它。
+            }
+
+            fun4();
+
+            console.log(c);//这里的c为100，因为它在fun4中被修改了
+            console.log(d);//这里并不是访问到了函数内部的变量，因为d时全局变量
+
+
+            /*********************
+             *
+             */
+
+            var e=40;
+
+            function fun5(e) {
+                alert(e);//没有形参e时肯定是外部的e为40；但有了形参，就相当于在函数内部声明了一个新变量即var e;只是未赋值，因此为undefined
+                e=125//这里相当于时把内部的e赋值为125，因为函数内部定义了e，相当于var e; e=125；因此外部引用e时e为40，而不是函数内部的125
+            }
+
+            console.log(e);//这里的e为40不吃125；
+
+            fun5();
+        </script>
+    </head>
+    <body>
+        
+    </body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <script>
+            /**
+             * 在页面中输出
+             *   *
+             *   **
+             *   ***
+             *   ****
+             *
+             *   和
+             *   ****
+             *   ****
+             *   ****
+             *   ****
+             *
+             *
+             *
+             */
+
+            for (var i = 1; i < 5; i++) {
+                for (var j = 1; j <= i; j++) {
+                    document.write("*");
+                }
+                document.write("<br>");
+            }
+
+            document.write("<hr>");
+
+            for (var j = 1; j <5; j++) {
+                    for (var i = 1; i < 5; i++) {
+                    document.write("*");
+                }
+                document.write("<br>");
+            }
+
+
+                //打印99乘法表
+            document.write("<hr>");
+
+            for (var i = 1; i <= 9; i++) {
+                for (var j = 1; j <= i; j++) {
+                    document.write("<span>"+j + "*" + i + "="+j*i+"&nbsp;"+"</span>");
+                }
+                document.write("<br>");
+
+            }
+        </script>
+        <style>
+            span {
+                display: inline-block;
+                width:100px;
+            }
+        </style>
+    </head>
+    <body>
+        
+    </body>
+</html>

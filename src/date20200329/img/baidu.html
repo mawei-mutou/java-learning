@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>百度一下，你就知道</title>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+            }
+            .row {
+                display: block;
+                width: 1349px;
+                height: 600px;
+
+            }
+            body {
+                width: 1349px;
+                height: 265px;
+                margin: 0;
+                overflow: auto;
+            }
+            .row1 {
+                width: 583px;
+                height: 24px;
+                float: right;
+                /*background-color: pink;*/
+                padding-right: 10px;
+                margin-top: 19px;
+                margin-left:auto;
+                margin-bottom: 5px;
+            }
+            #c2:hover {
+                color:blue;
+            }
+            #c3:hover {
+                color:blue;
+            }
+            #c4:hover {
+                color:blue;
+            }
+            #c5:hover {
+                color:blue;
+            }
+            #c6:hover {
+                color:blue;
+            }
+            #c7:hover {
+                color:blue;
+            }
+            #c8:hover {
+                color:blue;
+            }
+            #c9:hover {
+                color:blue;
+            }
+            #c10:hover {
+                background-color:#F9F9F9;
+                color:black;
+                border: 1px dashed black;
+                /*border:1px black dashed;*/
+            }
+
+
+            #c1 {
+                display: inline-block;
+                width: 60px;
+                height: 24px;
+                font:bold 14px 宋体;
+                color:red;
+                margin-left: 20px;
+                line-height: 20px;
+                line-height: 1.7em;
+                text-align: center;
+
+
+            }
+            #c2 {
+                display: inline-block;
+                width: 30px;
+                height: 24px;
+                font: bold 14px 宋体;
+                color:black;
+                margin-left: 15px;
+                line-height: 1.7em;
+                text-align: center;
+
+            }
+
+            #c3 {
+                display: inline-block;
+                width: 49px;
+                height: 24px;
+                font: bold 14px 宋体;
+                margin-left: 15px;
+                color:black;
+                line-height: 1.7em;
+                text-align: center;
+
+            }
+            #c4 {
+                display: inline-block;
+                width: 30px;
+                height: 24px;
+                font: bold 14px 宋体;
+                margin-left: 15px;
+                color:black;
+                line-height: 1.7em;
+                text-align: center;
+
+            }
+            #c5 {
+                display: inline-block;
+                width: 30px;
+                height: 24px;
+                font: bold 14px 宋体;
+                margin-left: 15px;
+                color:black;
+                line-height: 1.7em;
+                text-align: center;
+
+
+            }
+            #c6 {
+                display: inline-block;
+                width: 30px;
+                height: 24px;
+                font: bold 14px 宋体;
+                margin-left: 15px;
+                color:black;
+                line-height: 1.7em;
+                text-align: center;
+
+
+
+            }
+            #c7 {
+                display: inline-block;
+                width: 30px;
+                height: 24px;
+                font: bold 14px 宋体;
+                margin-left: 15px;
+                color:black;
+                line-height: 1.7em;
+                text-align: center;
+
+
+            }
+            #c8 {
+                display: inline-block;
+                width: 28px;
+                height: 24px;
+                font:  14px 宋体;
+                margin-left: 15px;
+                color:black;
+                line-height: 1.7em;
+                text-align: center;
+
+
+            }
+            #c9 {
+                display: inline-block;
+                width: 28px;
+                height: 24px;
+                font:  14px 宋体;
+                margin-left: 15px;
+                color:black;
+                line-height: 1.7em;
+                text-align: center;
+
+
+            }
+            #c10 {
+                display: inline-block;
+                width: 64px;
+                height: 23px;
+                font:  14px 宋体;
+                margin-left: 15px;
+                margin-right: 2px;
+                background-color: #3388FF;
+                color:white;
+                line-height: 1.7em;
+                text-decoration: none;
+                text-align: center;
+                border: 1px solid #3388FF;
+            }
+
+            .row2 {
+                width: 1349px;
+                height: 253px;
+                /*background-color: green;*/
+                margin: 0 auto;
+                border-top: 1px white solid;
+            }
+            .row3 {
+                width: 1349px;
+                height: 203px;
+                /*background-color: green;*/
+                margin: 0 auto;
+                border-top: 1px white solid;
+            }
+
+            #t1 {
+                display: block;
+                width: 1px;
+                height: 1px;
+                background-color: red;
+                margin-top:110px;
+                margin-left: 570px;
+            }
+
+            #img {
+                width: 230px;
+
+            }
+            #input {
+                display: inline-block;
+                width: 600px;
+                height: 40px;
+                margin-left: 300px;
+            }
+            #input:active {
+                color:blue;
+            }
+            #input:hover {
+                color:blue;
+                border: 1px blue solid;
+            }
+            .bg s_btn_wr {
+                display: inline-block;
+                background-color: blue;
+            }
+            #su {
+                display: inline-block;
+                margin-top: 100px;
+                width: 101px;
+                height: 44px;
+                font:16px 宋体；
+            }
+
+            .row4 {
+               width: 1349px;
+                height: 450px;
+                margin: 0 auto;
+                border: 1px white solid;
+            }
+
+            #photo2 {
+                margin-top: 100px ;
+                margin-left: 600px;
+                width: 140px;
+
+            }
+
+            .word1 {
+                /*word-spacing: 2em;*/
+                text-align: center;
+            }
+            .word2 {
+                text-align: center;
+                line-height: 2em;
+                color: #999999;
+                font-size:15px ;
+            }
+
+            .tip1 {
+                position: fixed;
+                bottom: 0px;
+                color: #999999;
+                float: left;
+                margin-top:130px;
+            }
+            .tip2 {
+
+                position: fixed;
+                float: right;
+                margin-top:130px;
+                bottom: 0px;
+                right: 0px;
+            }
+            .tip1 a  {
+                text-decoration: none;
+                color: #999999;
+                font: 15px 宋体;
+            }
+            .tip1 a:hover {
+                color: black;
+            }
+
+            .tip2 a  {
+                text-decoration: none;
+                color: #999999;
+                font: 15px 宋体;
+            }
+
+            .bg s_btn_wr {
+                background-color: blue;
+            }
+            #png3 {
+                position: absolute;
+                top: 49%;
+                left: 64%;
+                width: 30px;
+            }
+
+            .png3a:hover {
+                color: blue;
+
+            }
+            .png3a:active {
+
+            }
+        </style>
+    </head>
+    <body>
+        <div class="row">
+            <div class="row1">
+                <a id="c1" href="https://voice.baidu.com/act/newpneumonia/newpneumonia/?from=osari_pc_1" target="_blank">抗击肺炎</a>
+                <a id="c2" href="http://news.baidu.com" target="_blank">新闻</a>
+                <a id="c3" href="https://www.hao123.com" target="_blank">hao123</a>
+                <a id="c4" href="http://map.baidu.com" target="_blank">地图</a>
+                <a id="c5" href="http://v.baidu.com" target="_blank">视频</a>
+                <a id="c6" href="http://tieba.baidu.com" target="_blank">贴吧</a>
+                <a id="c7" href="http://xueshu.baidu.com" target="_blank">学术</a>
+                <a id="c8" href="https://passport.baidu.com/v2/?login&tpl=mn&u=http%3A%2F%2Fwww.baidu.com%2F&sms=5" target="_blank">登录</a>
+                <a id="c9" href="http://www.baidu.com/gaoji/preferences.html" target="_blank">设置</a>
+                <a id="c10" href="http://www.baidu.com/more/" target="_blank">更多产品</a>
+            </div>
+            <div class="row2">
+                <div class="row3">
+                    <a id="t1" href="#" >
+                        <img id="img" src="1.png" title="点击一下，了解更多">
+                    </a>
+                </div>
+
+                <div>
+                    <form id="form" >
+                        <input id="input" type="text">
+                            <a href="#" class=png3a><img id="png3" src="3.png"></a>
+                        <span class="bg s_btn_wr">
+                            <input id="su" class="bg s_btn" type="submit" value="百度一下" style="margin-left: -6px;background-color: blue; color: white;"></input>
+                        </span>
+                    </form>
+                </div>
+
+            </div>
+            <div class="row4">
+                <img id="photo2" src="2.png">
+                <P class="word1">下 载 百 度 A P P</P>
+                <p class="word2">有事搜一搜，没事看一看</p>
+
+                <p class="tip1">
+                    <a href="#" id="o1"><small class="sm1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;设为首页&nbsp;&nbsp;&nbsp;&nbsp;</small></a>
+                    <a href="#" id="o2"><small class="sm2">关于百度&nbsp;&nbsp;&nbsp;&nbsp; </small></a>
+                    <a href="#" id="o3"> <small class="sm3">About Baidu&nbsp;&nbsp;&nbsp;&nbsp;</small></a>
+                    <a href="#" id="o4"><small class="sm4">百度推广&nbsp;&nbsp;&nbsp;&nbsp; </small></a>
+                    <a href="#" id="o5"><small class="sm5">使用百度前必读&nbsp;&nbsp;&nbsp;&nbsp; </small></a>
+                    <a href="#" id="o6"><small class="sm6">意见反馈&nbsp;&nbsp;&nbsp;&nbsp; </small></a>
+                    <a href="#" id="o7"><small class="sm7">帮助中心 </small></a>
+
+                </p>
+
+                <p class="tip2">
+                    <a href="#"><small class="sm8">©2020 Baidu&nbsp;&nbsp;&nbsp;&nbsp;</small></a>
+                    <a href="#"><small class="sm9">(京)-经营性-2017-0020&nbsp;&nbsp;&nbsp;&nbsp; </small></a>
+                        <a href="#"><small class="sm10">京公网安备11000002000001号&nbsp;&nbsp;&nbsp;&nbsp;</small></a>
+                            <a href="#"><small class="sm11">京ICP证030173号 </small></a>
+                </p>
+            </div>
+        </div>
+
+    </body>
+</html>

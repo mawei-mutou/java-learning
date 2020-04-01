@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <script>
+            //创建一个数组
+            var arr = ["孙悟空", "猪八戒", "沙和尚"];
+
+            /**
+             * push()
+             *  - 该方法可以向数组末尾添加一个或者多个元素，并返回添加后的数组的新的长度
+             */
+
+            var result = arr.push("唐僧", "蜘蛛精", "白骨精");
+
+            console.log(arr);
+            console.log("result = " + result);
+
+            /**
+             * pop()
+             *  - 该方法可以删除数组的最后一个元素，并将删除的元素返回
+             */
+            result = arr.pop();
+            console.log(result);
+            console.log(arr.length);
+
+
+            /**
+             * unshift()
+             *  -该方法可以在数组开头添加一个或者多个元素，并返回数组的长度
+             */
+            var result = arr.unshift("牛魔王", "铁扇公主");
+            console.log(arr.length);
+            console.log(arr);
+
+            /**
+             * shift()
+             *  -该方法可以在数组开头删除一个元素，并返回删除的元素
+             */
+            var result = arr.shift();
+            console.log(arr.length);
+            console.log(result);
+
+        </script>
+    </head>
+    <body>
+        
+    </body>
+</html>

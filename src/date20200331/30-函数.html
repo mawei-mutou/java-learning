@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <script>
+            /**
+             * 函数也是一个对象，他封装了一些功能(代码)，在需要时可以执行这些功能(代码)
+             * 使用typeof检查一个函数对象时，会返回一个function
+             */
+
+                //创建函数方法一：使用构造函数，将要封装的代码一字符串的形式传递给它
+                //但是实际工作中很少使用这种方式创建函数对象
+            var fun = new Function("console.log('这是第一个函数')");
+
+            //调用函数，函数里面封装的代码才会运行
+            //调用方法为： 函数对象名()
+
+            fun();
+
+            /**
+             * 创建函数方式二：使用函数声明
+             * 语法
+             *      function 函数名（[形参1，形参2....形参N]）{
+             *          函数体语句
+             *      }
+             */
+
+            function fun2() {
+                console.log("这是第二个函数");
+                alert("哈哈哈哈");
+                document.write("dsflsdfdsdsj");
+            }
+
+            fun2();
+
+            /**
+             * 创建函数对象方法三：
+             * 语法;
+             * var 函数名=function([形参1，形参2...形参N]){
+             *     函数体语句
+             * }
+             */
+
+            var fun3 = function () {
+                console.log("这是第三个函数，就是创建一个匿名函数对象，将它的地址赋值给fun3")
+            };
+
+            //含有形参的函数
+            function sum(a,b) {//JS中不需要指定形参的类型
+                console.log(a + b);
+            }
+
+            //调用函数再赋值
+            sum(3, 4);
+
+            //调用函数时，函数解析器不会检查函数的类型个数，多的形参会被舍弃，非法参数可能会引起错误
+
+            sum(123);//结果NaN，因为b没有实参为undefined
+            sum(true,false);//结果为1，它将他们转换为Number类型了
+            sum(8,48,25,"sfsd",true);//结果为56.后面的被舍弃
+            sum("你好","，凡人")//结果就是两个字符串拼接
+            sum("8", 8);
+
+
+        </script>
+    </head>
+    <body>
+        
+    </body>
+</html>

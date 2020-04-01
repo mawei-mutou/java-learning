@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <script>
+            /**
+             * 打印1-100之间的所有质数
+             *
+             */
+            console.time("test");
+            console.timeEnd("test");
+
+            var count=0;
+            for (var i = 1; i <= 100; i++) {
+                if (i == 3) {
+                    document.write(i+"<br>");
+                    count++;
+                }
+                if (i <= 3) {
+                    continue;
+                }
+                var b = parseInt(Math.sqrt(i));
+                for (var j = 2; j <= b; j++) {
+                    if (i % j == 0) {
+                        break;
+                    }
+                    if (j == b) {
+                        document.write(i+"<br>")
+                        count++;
+                    }
+                }
+            }
+
+            document.write("质数总个数为：" + count);
+            console.timeEnd("test");
+
+        </script>
+    </head>
+    <body>
+        
+    </body>
+</html>

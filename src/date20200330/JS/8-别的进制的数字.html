@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <script>
+            /*
+            js中，16进制的数字，需要用0x开头
+                    8进制需要用0开头
+                    如果要用2进制则需要用0b开头，但不是所有的浏览器都支持
+             */
+
+            var a=0x10;
+            console.log(a)
+
+            var b= 010;
+            console.log(b)
+
+
+            a = "070";
+            a = parseInt(a,8);//"070"这种字符串，有的浏览器当成8进制解析，有的当成10进制解析,所以可以传递第二个参数，表示数字的进制
+
+            console.log(a);
+
+            /*
+            将别的数据类型转换为boolean类型
+
+            数子-->boolean
+                    除了0和NaN，别的都是true；
+             字符串--->boolean
+                    除了空串，别的都是true；
+                 null和undefined都会传唤成false
+
+                 对象也会转换成true;
+             */
+
+
+
+
+        </script>
+    </head>
+    <body>
+        
+    </body>
+</html>

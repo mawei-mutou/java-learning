@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <script>
+            /**
+             * JS的变量都是保存在栈中e，
+             * 基本数据类型的值直接在栈内存中储存
+             * 值与值之间是相互独立存在，修改一个变量的值不会影响别的变量
+             *
+             * 但是引用型的变量它的值是对象的内存地址
+             *
+             *
+             */
+
+            var a=123;
+            var b=a;
+            a++;
+            console.log(a, b);
+
+            var obj = new Object();
+            obj.name = "沙和尚";
+            var obj2 = obj;
+
+            console.log(obj.name, obj2.name);
+
+            obj.name = "唐僧";//修改obj的name属性，会发现obj2的name属性同样发生了改变，因为它们的值指向的同一个对象的内存地址
+            console.log(obj.name, obj2.name);
+
+
+            obj2=null;//此时修改的是obj2的值，也就是将原谅的内存地址改为null，它不影响obj的值，obj的值仍然是原来的对象的内存地址
+
+            console.log(obj, obj2);
+
+            var a=10;
+            var b=10;
+            console.log(a == b);//返回值为true，基本数据类型变量的值直接放在了栈中，因此这两个的值是相同的。
+
+
+            var obj3 = new Object();
+            var obj4 = new Object();
+
+            obj3.name = "你好";
+            obj4.name = "你好";
+
+            console.log(obj3 == obj4);//返回值为false，因为obj3和obj4 的值为不同的对象的内存地址
+
+        </script>
+    </head>
+    <body>
+        
+    </body>
+</html>
