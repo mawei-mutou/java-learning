@@ -16,16 +16,29 @@
              */
 
             var arr = ["孙悟空", "猪八戒", "沙和尚","唐僧", "蜘蛛精", "白骨精"];
+            arr.__proto__.toString = function () {
+                for (var i = 0; i < arr.length; i++) {
+                        console.log(arr[i]);
+                    }
+            };
 
-            var result = arr.slice(0,2);
-            for (var i = 0; i < result.length; i++) {
-                console.log(result[i]);
-            }
-            var result2 = arr.slice(3);
+            // var result = arr.slice(0,2);
+            // for (var i = 0; i < result.length; i++) {
+            //     console.log(result[i]);
+            // }
+            // var result2 = arr.slice(3);
+            //
+            // for (var i = 0; i < result2.length; i++) {
+            //     console.log(result2[i]);
+            // }
 
-            for (var i = 0; i < result2.length; i++) {
-                console.log(result2[i]);
-            }
+            /**
+             * splice（a,b）方法
+             * a表示从什么位置开始删除，b表示删除几个，如果b为0表示一个不删除
+             * 可以在后面添加多个元素，添加得元素会在删除位置放入数组
+             */
+            arr.splice(1, 2,"玉帝","龙王");
+            arr.toString();
         </script>
     </head>
     <body>

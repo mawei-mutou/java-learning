@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <script>
+            /**
+             * 电子邮件
+             * 任意数子字母下划线.任意字母数字下划线@ 任意数子字母 . 任意字母（2-5位）.任意字母（2-5位）
+             * \w{3,} (\.\w+)*  @ [A-z0-9]+  (\.[A-z]){1,2}
+             */
+
+            var ema = /^\w{3,}(\.\w+)*@[A-z0-9]+(\.[A-z]){1,2}$/;
+
+            var email = "1321053879@qq.com";
+            console.log(ema.test(email));
+
+        </script>
+    </head>
+    <body>
+        
+    </body>
+</html>

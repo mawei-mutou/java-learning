@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <style>
+            #box1 {
+                width: 200px;
+                height: 200px;
+                background-color: red;
+
+                position: absolute;
+            }
+        </style>
+        <script>
+            /**
+             * 实现让DIV块跟随鼠标移动而移动：
+             *  获取鼠标的位置，再设置DIV的绝对位置即可
+             */
+
+            window.onload = function () {
+                //鼠标再整个页面中移动，固先找到body对象
+                var body = document.body;
+                var box1=document.getElementById("box1")
+                document.onmousemove = function (event) {
+                    event = event || window.event;
+                    //clientX\clientY它两是相对于可视页面的。即始终是相对于屏幕的左上角
+                    //pageX\pageY是相对于整个document的,但是它在低版本的火狐中不兼容
+                    var x = event.clientX;//可以通过加上滚动条的滚动距离即可
+                    var y = event.clientY;
+
+                    // var x = event.pageX;
+                    // var y = event.pageY;
+
+                    //获取滚动条滚动的距离.
+
+                    var l=document.documentElement.scrollTop;//documentElement表示的是html元素节点
+
+                    //修改div的坐标，div的位置是相对于整个document文档的，而鼠标的位置是相对于整个可视页面
+                    box1.style.top = y+l+"px";//由于这里需要传一个 "500px"  这样的字符串进去，而x 、y为纯数字，
+                    box1.style.left = x+"px";
+                };
+            };
+        </script>
+    </head>
+    <body style="height: 2000px">
+        <div id="box1"></div>
+    </body>
+</html>

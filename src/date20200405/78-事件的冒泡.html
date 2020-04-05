@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <style>
+            #box1 {
+                width: 200px;
+                height: 200px;
+                background-color: yellowgreen;
+            }
+            #s1 {
+                background-color: yellow;
+            }
+        </style>
+        <script type="text/javascript">
+
+            /**
+             * 事件的冒泡 (Bubble)：
+             *      当后代的事件响应函数触发时，如果祖先有相同的 事件响应，则也会触发祖先的响应函数
+             *      比如这里的：onclick事件，span的 onclick事件的响应函数触发时，div的onclick和body的onclick响应函数也会触发
+             *
+             *      事件的冒泡大多数时候是有用的，个别情况下是无用的，通过 事件 对象的 event.cancelBubble 去设置取消冒泡
+             */
+            window.onload = function () {
+                //为s1绑定一个单击响应函数
+                var s1 = document.getElementById("s1");
+                s1.onclick = function (event) {
+                    var event = event || window.event;
+                    event.cancelBubble=true;//将span的事件冒泡取消，这它的事件不会冒泡
+                    alert("这是span的单机响应函数");
+                };
+
+                var box1 = document.getElementById("box1");
+                box1.onclick = function () {
+                    alert("这是box1中的单击响应函数");
+                };
+
+                document.body.onclick = function () {
+                    alert("这是body中的单击响应函数");
+                };
+            };
+        </script>
+    </head>
+    <body>
+        <div id="box1">
+            我是box1
+            <span id="s1">我是span</span>
+        </div>
+    </body>
+</html>

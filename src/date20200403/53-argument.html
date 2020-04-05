@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <script>
+            /**
+             * argument参数
+             * 函数被调用时，浏览器会传递两个参数
+             * 1、this
+             * 2、arguments
+             *  arguments时一个类数组对象，它也可以对同索引来操作数据，也可以获取长度
+             *  -我们传递的所有实参都会保存在argument中
+             *  arguments.length为它的长度
+             *  arguments[0]表示第一个实参
+             *
+             *  -arguments有一个属性叫做callee，它对应着当前的函数对象
+             */
+
+            function fun() {
+                console.log(arguments.length);//为2
+                console.log(arguments[0] + "  ** " + arguments[1]+"长度为"+arguments.length);
+
+                console.log(typeof arguments.callee);
+                var fun1 = fun.arguments.callee;
+                fun1("dfa",6);//这就相当于于运行了函数fun()
+            }
+
+
+            fun("nih ",5);
+
+        </script>
+    </head>
+    <body>
+        
+    </body>
+</html>

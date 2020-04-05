@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <script>
+            /**
+             * concat()可以连接两个数组或多个数组，并将新的数组返回，也可以传元素，都会拼起来
+             * 不会对原数组产生影响
+             */
+            var arr = ["孙悟空", "猪八戒", "沙和尚"];
+            // var arr2 = ["唐僧", "蜘蛛精", "白骨精"];
+            // var result = arr.concat(arr2, "高小姐");
+            // for (var i = 0; i < result.length; i++) {
+            //     console.log(result[i]);
+            // }
+
+            /**
+             * join()可以将数组转换成字符串，可以传一个参数作为元素的间隔符，不传字默认使用 ，
+             * 不会修改原数组
+             */
+
+            var result = arr.join("--");
+            console.log(arr);
+            console.log(typeof result, result);
+
+            /**
+             * sort()可以将数组中的元素进行按照Unicode编码升序排序
+             * 也可以自己取定义排序的规则
+             * 直接对原数组进行排序
+             * 但是对纯数字进行排序会产生错误
+             */
+            arr3 = ["a", "c", "d", "b", "e"];
+            arr3.sort();
+            console.log(arr3);
+            arr2 = [2, 3, 5, 4, 36, 788, 12, 98];
+            arr2.sort();
+            console.log(arr2);//按照字符串的Unicode编码排序产生了错误
+
+            arr2.sort(function (a, b) {//a在数组中的位置一定是在b的前面，
+                console.log("a=" + a + "   b=" + b);
+                return a-b;//返回正数时，交换a和b的位置，返回负数和0不交换，这样为升序
+                //return b-a;//这样为降序
+
+            });
+            console.log(arr2);//按照自己定义的规则进行排序
+
+
+
+
+        </script>
+    </head>
+    <body>
+        
+    </body>
+</html>

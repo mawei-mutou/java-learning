@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <script>
+            /**
+             * 字符串在底层是以字符数组的形式保存d的，因此可以使用数组的相关属性和方法取操作字符串
+             *
+             */
+            var str = "hSello JS";
+            console.log(str.length);//获取字符串的长度
+            /**
+             * charAt()返回字符串中指定的字符
+             */
+            // var re = str.charAt(0);//等价于str[0]
+            var re = str[0];
+            console.log(re);
+            /**
+             * charCodeAt()
+             * 返回指定位置出的字符的Unicode编码
+             */
+
+            var re = str.charCodeAt(0);//104
+            console.log(re);
+
+            /**
+             * formCharAt()
+             * 根据Unicode编码返回相应的字符
+             */
+
+            re = String.fromCharCode(104);
+            console.log(re);//h
+
+
+            /**
+             * concate()用来连接多个字符串,对原字符串不会影响
+             */
+
+            re = str.concat("你好", "再见");
+            console.log(re);
+
+            /**
+             * indexOf("a",b)
+             * 返回一个字符串中第一个含有指定的字符串的位置，没有则返回-1
+             * 不指定b时从0开始查找
+             * 指定从指定位置开始查找
+             */
+
+            console.log(str.indexOf("h"));//0
+
+            /**
+             * lastIndexOf()
+             * 和indexOF用法一模一样，不同时它时从后往前找，indexOf从前往后找，也可以指定开始查找位置
+             */
+            str.lastIndexOf("S");
+
+
+            /**
+             * slice(a，b)和之前将的数组中的slice（）方法一样，不对原字符串影响，不写b则从a一直到b
+             * 返回新的字符串
+             */
+
+            /**
+             * substring（a，b）[a,b)
+             * 它和slice一样
+             */
+
+
+            /**
+             * split(a)//a为字符参数
+             * 以a拆分字符串，以新的字符数组返回，
+             * 若参数为空串则将每个字符拆开
+             */
+
+            var str = "sdfsa dfasda dfsdfsfdsa";
+
+            var result = str.split("");
+            for (var i = 0; i < result.length; i++) {
+                console.log(result[i]);
+            }
+
+            /**
+             * toUpperCase();
+             * toLowerCase();
+             *a
+             */
+
+            var re = str.toLowerCase();
+            console.log(re);
+
+        </script>
+    </head>
+    <body>
+        
+    </body>
+</html>

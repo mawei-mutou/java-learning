@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <script>
+            /**
+             * Date对象，表示日期
+             */
+
+            // var d = new Date();
+            // console.log(d);//默认将d被创建的时间赋值给d
+
+            //创建一个指定时间的对象，需要在构造函数中传递一个表示时间的字符串作为参数
+            //日期的格式 月份/日/年 时:分：秒
+            var d2 = new Date("4/2/2020 15:01:20");
+            // console.log(d2);
+
+            var date = d2.getDate();//获取当前日期对象是几日
+            console.log(date);
+            var day = d2.getDay();//返回当前日期是一周的星期几,0-6依次表示周日，周一。。。
+            var m=d2.getMonth()//获取月 0-11，表示一月到12月
+            var y=d2.getFullYear()//获取年
+
+            console.log(y);
+            console.log(day);
+
+            var t=d2.getTime();//获取时间戳，以1970年一月一日到现在的毫秒数
+            console.log(t);
+
+            //获取当前时间的时间戳
+            var time = new Date.now();//这是返回当前时间的时间戳
+            console.log(time);
+
+
+        </script>
+    </head>
+    <body>
+        
+    </body>
+</html>

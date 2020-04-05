@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <script>
+            window.onload = function () {
+                /**
+                 * 点击按钮以后弹出一个内容
+                 */
+                var btn01 = document.getElementById("btn01");
+                // btn01.onclick= function () {
+                //     alert(1);
+                // };
+                //
+                // btn01.onclick= function () {
+                //     alert(2);
+                // };
+                // btn01.onclick= function () {
+                //     alert(3);
+                // };
+
+                //通过上面的这种方式给一个对象绑定事件响应函数，只能一个对象的一个事件只能绑定响应函数，多个则会后面的前的覆盖
+                /**
+                 * addEventListener()
+                 * - 通过这个方法可以为一个元素的一个事件绑定多个响应函数。且不会覆盖。按顺序执行
+                 *  -参数
+                 *          1、事件的字符串，不要 on 。比如 onclick --> click
+                 *          2、 回调函数，当事件被触发时会被调用
+                 *          3、 是否在捕获阶段触发事件，需要一个布尔值，一般都是false
+                 *
+                 *          但是IE8及以下不支持，它用的是attacheEvent（）
+                 *          参数  1、是将字符串，要on
+                 *                 2、回调函数
+                 */
+
+                btn01.addEventListener("click", function () {
+                    alert(1);
+                    alert(this);//这个方法中的this谁调用就是谁。所有这里为btn01
+                },false);
+
+                btn01.addEventListener("click", function () {
+                    alert(2);
+                },false);
+
+                btn01.addEventListener("click", function () {
+                    alert(3);
+                },false);
+
+                //
+                // btn01.attachEvent("onclick", function () {
+                //     alert(1);
+                // });
+
+            };
+        </script>
+    </head>
+    <body>
+        <button id="btn01">点我一下</button>
+    </body>
+</html>

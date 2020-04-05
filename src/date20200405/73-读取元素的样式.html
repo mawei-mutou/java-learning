@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <style type="text/css">
+            #box1 {
+                width: 100px;
+                height: 100px;
+                background-color: yellow;
+            }
+        </style>
+        <script>
+            /**
+             * 获取元素当前正在显示的样式
+             * 语法： 元素.currentStyle.样式名
+             *  box1.currentStyle.width
+             *  这个只支持IE浏览器
+             *
+             *  别的浏览器可以使用
+             *          getComputedStyle(a,b),它是window的一个方法，可以直接使用
+             *          a:要获取的元素名
+             *          b:可以传递一个伪元素，一般使用null
+             *          返回的是当前元素的样式对象
+             */
+            window.onload = function () {
+                var b1 = document.getElementById("b1");
+                var box1 = document.getElementById("box1");
+                b1.onclick = function () {
+                    // alert(box1.currentStyle.width);
+                    var st = getComputedStyle(box1, null);
+                    var width = st.width;//通过样式对象获取样式
+                    alert(width);
+                };
+            };
+        </script>
+    </head>
+    <body>
+        <button id="b1">点我一下</button>
+        <br>
+        <div id="box1"></div>
+    </body>
+</html>

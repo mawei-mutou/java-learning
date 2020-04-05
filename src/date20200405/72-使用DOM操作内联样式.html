@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <style type="text/css">
+            #box1 {
+                width: 200px;
+                height: 200px;
+                background-color: red;
+            }
+        </style>
+
+        <script type="text/javascript">
+            window.onload = function () {
+                /**
+                 * 点击按钮以后修改box1的大小
+                 */
+                    //获取box1
+                var btn01 = document.getElementById("btn01");
+                var box1 = document.getElementById("box1");
+                btn01.onclick = function () {
+                    /**
+                     * 通过JS修改元素的样式
+                     * 语法： 元素.style.样式名=样式值
+                     *      通过style修改的 样式和读取的样式都是内联样式
+                     *
+                     * 注意：如果CSS的样式名含有-
+                     *   这种样式名在JS中是不合法的比如：background-color
+                     *   需要将 - 去掉，再使用驼峰命名法命名
+                     */
+                    box1.style.width = "500px";
+                    box1.style.height = "300px";//这种修改的样式是修改在了内联样式里面，因为内联样式的优先级最高，可以立马见效
+                    box1.style.backgroundColor = "yellow";
+
+                };
+
+                /**
+                 * 读取样式:
+                 *  var a=元素节点名.样式名
+                 */
+                var btn02 = document.getElementById("btn02");
+                btn02.onclick = function () {
+                    var box1 = document.getElementById("box1");
+
+                    var a = box1.style.width;//返回的是字符串
+                    alert(a);
+                };
+            };
+        </script>
+    </head>
+    <body>
+        <button id="btn01">点我一下</button>
+        <button id="btn02">点我一下</button>
+        <br>
+        <div id="box1"></div>
+
+    </body>
+</html>

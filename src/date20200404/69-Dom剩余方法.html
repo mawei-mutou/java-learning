@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <script>
+            /**
+             * 获取body标签
+             */
+            // var body = document.getElementsByTagName("body")[0];
+
+            /**
+             * 在document中有一个属性叫body，它保存的是body的引用
+             * document.documentElement保存的 是html根标签
+             */
+            var body=document.body;
+            console.log(typeof body);
+
+            var html = document.documentElement;
+            console.log(html);
+
+            var all = document.all;//表示页面中的所有元素，以数组形式保存
+
+            /**
+             * 根据class属性查询一组元素节点对象
+             * getElementByClassName()可以根据class属性值获取一组元素节点对象
+             * 但这个方法不支持IE8及以下的浏览器
+             */
+
+            var box1 = document.getElementsByClassName("box1");
+
+            /**
+             * document.querySelector()
+             *  可以传一个选择器的字符串作为参数，可以根据一个css选择器来查询一个元素节点对象
+             *  document.querySelectorAll()
+             *  它和前一个类似，只是它会将所有的满足条件的元素节点对象取出，保存在数组中返回
+             */
+
+            document.querySelector(".box1 div");//获取class为box1的第一个div
+
+
+        </script>
+    </head>
+    <body>
+        <div class="box1">
+            <div>
+                第一
+            </div>
+            <div>
+                第二
+            </div>
+        </div>
+
+        <div>
+
+        </div>
+
+
+    </body>
+</html>

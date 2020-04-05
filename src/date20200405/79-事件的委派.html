@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <script>
+            window.onload = function () {
+                /**
+                 * 为所有的超链接设置单击响应函数
+                 */
+                // var allA = document.getElementsByTagName("a");
+                // //遍历
+                // for (var i = 0; i < allA.length; i++) {
+                //     allA[i].onclick=function () {
+                //         alert("我是a的单击响应函数");
+                //     }
+                // }
+
+
+                //添加新的超链接
+                var btn01 = document.getElementById("btn01");
+                btn01.onclick=function () {
+                    var li = document.createElement("li");
+                    li.innerHTML = "<a href=\"javascript:;\" class=\"link\">新的超链接</a>";
+
+                    var ul = document.getElementById("ul");
+                    ul.appendChild(li);
+                }
+
+                /**
+                 * 我们希望，只绑定一次事件，即可应用到多个元素上，即使元素是后面添加的
+                 * 将事件响应函数绑定到元素的共同的祖先元素上
+                 * 利用事件的冒泡，当这些子元素产生事件时，会触发祖先的相同事件反应函数
+                 * 这就叫做事件的委派。它可以减少事件绑定的次数，提供程序的性能
+                 *
+                 *
+                 *
+                 * target
+                 *  -event的target表示的触发事件的对象
+                 * event.target
+                 */
+
+                var ul = document.getElementById("ul");
+                ul.onclick=function (event) {
+                    var event = event || window.event;
+                    if (event.target.className === "link") {
+                        alert("我是ul的单击响应函数");
+                    }
+                }
+            };
+        </script>
+    </head>
+    <body>
+        <button id="btn01">添加超链接</button>
+        <ul id="ul" style="background-color: #EDD21E;">
+            <li><a href="javascript:;" class="link">超链接一</a></li>
+            <li><a href="javascript:;" class="link">超链接二</a></li>
+            <li><a href="javascript:;" class="link">超链接三</a></li>
+        </ul>
+    </body>
+</html>

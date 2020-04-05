@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>图片切换小练习</title>
+        <style type="text/css">
+            div {
+                width: 500px;
+                right: 500px;
+                background-color: yellowgreen;
+                margin: 100px auto;
+                border:1px red solid;
+            }
+            #tip {
+                margin-top: 20px;
+                text-align: center;
+            }
+            #pre {
+                position: relative;
+                left:180px;
+            }
+
+            #next {
+                position: relative;
+                left:180px;
+            }
+        </style>
+        <script type="text/javascript">
+
+            //图片路径数组
+            var pics = ["1.gif", "2.png", "3.png", "4.png", "5.jpg"];
+            window.onload = function () {
+                //获取button对象
+                var pre = document.getElementById("pre");
+                var next = document.getElementById("next");
+                //获取img对象
+                var img = document.getElementById("pic");
+                var tip = document.getElementById("tip");
+
+                var index=0;
+
+                    //设置事件
+                    pre.onclick = function () {
+                        if (index == 0) {
+                            index = 4;
+                        } else {
+                            index--;
+                        }
+
+                        img.src = pics[index];
+                        tip.innerHTML = "一共" + pics.length + "张图片，当前第" + (index + 1) + "张";
+                    };
+
+                    next.onclick = function () {
+                        if (index == 4) {
+                            index = 0;
+                        } else {
+                            index++;
+                        }
+
+                        img.src = pics[index];
+                        tip.innerHTML = "一共" + pics.length + "张图片，当前第" + (index + 1) + "张";
+
+                    };
+            };
+        </script>
+
+    </head>
+    <body>
+        <div>
+            <p id="tip">一共5张图片，当前第1张</p>
+            <img id="pic" src="1.gif" alt="图片">
+            <br>
+            <button id="pre">上一张</button>
+            <button id ="next">下一张</button>
+        </div>
+
+
+    </body>
+</html>

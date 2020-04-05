@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <style>
+            p {
+                width: 300px;
+                height: 300px;
+                background-color: green;
+                overflow: auto;
+            }
+        </style>
+        <script>
+            window.onload = function () {
+                var inputs = document.getElementsByTagName("input");
+                var info = document.getElementById("info");
+                //为info绑定一个事件响应函数，即滚动事件的响应函数 onscroll
+                info.onscroll = function () {
+                    if (info.scrollHeight - info.clientHeight === info.scrollTop) {
+                        inputs[0].disabled = false;//表示滚到底后，表单就可以使用了。给disabled属性设为false
+                        inputs[1].disabled = false;
+                    }
+                };
+            };
+        </script>
+    </head>
+    <body>
+        <h3>欢迎亲注册！</h3>
+            <p id="info">四月，最美的月份，带着春暖花开，带着诗情画意，悄然的来到了人间。人间的四月天，用它最温柔的风，最温柔的雨，让爱情和希望都随它一起到来。
+
+                一个人走在这温暖的的四月，总感觉有些孤单，还记得曾经的四月，有你在身边，有你的温柔，我的承诺，在那个四月里，尽情的相爱，如今，那份爱，终究是走进了遗憾，那份缘终究是随风而散。
+
+                回忆在在心中又重新聚集，想起我们的相遇，想起我们曾走过的路程，一幕幕动人的画面使我坚信，即使现在我们已经分开，却依然深爱着对方，想要去找你，让我们再萍水相逢一次，让我再深爱一次，也许，就能相守到白头，就能不负这一生我们的缘份。
+
+                可是，幽深的岁月，已然不再给我们机会了。未能珍惜曾经，最终各自带着对彼此的记忆，伴随余生。尘世间，只能默默地为你祝福。默默地将你思念。
+
+                走在陌生的城市，走在熟悉的季节，每看到一个与你有关的回忆，心总是那么疼痛，错过了一生最爱的你，只能让你我，在彼此的记忆中留存。
+
+                看着茫茫人海，望着日月轮回，带着和你的曾经，安静的守在这尘世，此去经年的路上，愿你的每一天，都是人间的四月天，在这浪漫的红尘里，愿和你常伴的一切，都是你的喜欢。
+
+                版权作品，未经《短文学》书面授权，严禁转载，违者将被追究法律责任。</p>
+        <!--为一个input元素添加disabled="disabled"，则表名表单项将变成不可用的状态-->
+        <input type="checkbox" disabled="disabled">我已经仔细阅读协议
+        <input type="submit" value="注册" disabled="disabled">
+
+    </body>
+</html>

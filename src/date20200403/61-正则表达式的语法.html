@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <script>
+            /**
+             * 创建一个正则表达式检查一个字符串中是否含有aaa
+             */
+            /**
+             * 量词
+             * -通过量词可以设置一个内容出现的次数
+             *  {n}出现n次
+             *  {m,n}最少m次，最多n次，默认使用最多的，价格？使用最少
+             *  {m,}至少m次
+             *
+             *  + 至少一次
+             *  * 任意次数
+             *  ？没有或者一次
+             *
+             * @type {RegExp}
+             */
+
+            // var reg = /a{3}/;
+            // console.log(reg.test("aaabc"));
+
+            /**
+             *  检查一个字符串是否以a开头
+             *  ^ 表示开头，^ 使用在[]内表示取反
+             *  ^ 与字符串开始的地方匹配
+             *  $ 与字符串结束的地方匹配
+             * \b 匹配一个单词边界
+             */
+            // reg = /^a/;
+            // console.log(reg.test("abdxxdssaDD"));
+            //
+            // reg = /a$/;
+            // console.log(reg.test("abdxxdssaDDa"));
+
+            /**
+             *  . 表示除了换行符以为的所有字符 要检查它自身需要用转义字符 \.
+             *  \s表示空白字符s ， \S 表示除空白字符外的所有字符 所有[\s\S]表示所有的字符
+             *  \w表示字母数字下划线，\W表示的范围和\w相反
+             *  \d表示数子，\D除数字外的所有字符
+             *
+             *  \b单词边界
+             */
+
+            // reg=/\bchild\b/;
+            // console.log(reg.test("hello child "));//true
+            // console.log(reg.test("hello children"));//false
+
+            //接受一个用户的输入
+            // var str = prompt("请输入你的用户名：");
+            // console.log(str);
+
+            //出去字符串中开头和结尾的空格，就是使用""替换空格，中间的不去除
+            // var str = "          hel  lo     ";
+            // // str = str.replace(/^\s*/, "");
+            // // str = str.replace(/\s*$/, "");
+            // str = str.replace(/^\s*|\s*$/g, "");//上面的综合
+            // console.log(str);
+
+
+
+        </script>
+    </head>
+    <body>
+        
+    </body>
+</html>

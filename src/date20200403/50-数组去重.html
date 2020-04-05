@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <script>
+            /**去除数组的重复元素
+             *
+             */
+
+            var arr = [1, 2, 3, 1, 4,4,4,4,4,4,4,4, 4, 6, 7, 3, 7, 8, 9, 2];
+            for (var i = 0; i < arr.length; i++) {
+                for (var j = i + 1; j < arr.length; j++) {
+                    if (arr[i] === arr[j]) {
+                        arr.splice(j, 1);
+                        j--;
+                    }
+                }
+            }
+
+            arr.__proto__.toString = function () {
+                for (var i = 0; i < arr.length; i++) {
+                    console.log(arr[i]);
+                }
+            };
+            arr.toString();
+        </script>
+    </head>
+    <body>
+        
+    </body>
+</html>

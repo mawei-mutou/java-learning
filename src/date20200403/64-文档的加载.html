@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <script>
+            /**
+             * 浏览器在加载一个页面时，时按照自上而下的顺序加载的
+             * 读取一行就运行一行，如果将script标签写在页面的上边
+             * 在代码执行时没页面还没有加载
+             */
+
+            //     //获取id位btn的按钮
+            // var btn = document.getElementById("btn");
+            // btn.onclick = function () {
+            //     alert("hello");
+            // };//此时btn为空，因为下面的还没有加载
+
+            /**
+             * onload事件会在整个页面加载完成之后才触发
+             * 为window绑定一个onload事件
+             */
+
+            window.onload = function () {
+                //获取id位btn的按钮
+                var btn = document.getElementById("btn");
+                    btn.onclick = function () {
+                        alert("hello");
+                };//此时btn为空，因为下面的还没有加载
+            };
+        </script>
+    </head>
+    <body>
+        <button id="btn">这是一个按钮</button>
+    </body>
+</html>

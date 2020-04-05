@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <style>
+            /** {*/
+            /*    margin:0;*/
+            /*    padding: 0;*/
+            /*}*/
+            #box1 {
+                width: 100px;
+                height: 100px;
+                background-color: red;
+                position: absolute;
+            }
+
+            #box2 {
+                width: 100px;
+                height: 100px;
+                background-color: yellow;
+                position: absolute;
+                top: 300px;
+                left: 300px;
+            }
+        </style>
+
+        <script>
+            /**
+             * 拖拽有三个阶段
+             *      1、鼠标按下阶段 onmousedown事件
+             *      2、鼠标移动阶段 onmousemove事件
+             *      3、鼠标按键抬起阶段 onmouseup事件
+             */
+
+            window.onload = function () {
+                var box1 = document.getElementById("box1");
+                //第一阶段：按下
+                box1.onmousedown=function (event) {
+                    //获取鼠标的位置，这里先不考虑存在滚动条的情况
+                    var event = event || window.event;//获取该事件对象
+                    //鼠标点击的时候求除偏移量
+                    //div的水平偏移量 鼠标.clientX - 元素.offsetLeft
+                    //div的垂直偏移量 鼠标.clientY - 元素.offsetTop
+                    var divX = event.clientX-box1.offsetLeft;
+                    var divY = event.clientY-box1.offsetTop;
+
+
+                    //第二阶段：按下之后的move阶段
+                    document.onmousemove=function (event) {
+                        //获取鼠标的位置，这里先不考虑存在滚动条的情况
+                        var event = event || window.event;//获取该事件对象
+                        var x = event.clientX-divX;
+                        var y = event.clientY-divY;
+
+
+
+
+                        box1.style.left = x+ "px";
+                        box1.style.top =y+ "px";
+                    };
+
+                    //第三阶段：鼠标按键抬起
+                    document.onmouseup= function () {
+                        //关闭mousemove事件
+                        document.onmousemove=null;
+                        //关闭
+                        document.onmouseup = null;
+                    };
+                };
+
+                return false;//不执行浏览器的 一些默认行为
+            };
+        </script>
+    </head>
+    <body>
+        <div id="box1"></div>
+        <div id="box2"></div>
+    </body>
+</html>

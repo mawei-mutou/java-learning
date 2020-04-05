@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <script>
+            /**
+             * 正则表达式
+             */
+
+                //创建正则表达式的对象
+                //语法： var 变量= new RegExp（"正则表达式"，"匹配模式"）
+                //匹配模式：i 表示忽略大小写，g
+                /**
+                 *  IGNORECASE 忽略大小写模式 – 匹配时忽略大小写。 – 默认情况下，正则表达式是要区分大小写的。
+                 *  g表示全局
+                 */
+            var reg = new RegExp("a");//"a"可以用来检查字符串中是否含有字符a
+            var str = "bdsa";
+
+            /**
+             * 正则表达式的方法
+             * test()
+             * 可以使用它是否符合正则表达式的规则，符合返回true，否则false
+             *
+             */
+
+            var re = reg.test(str);
+            console.log(re)
+        </script>
+    </head>
+    <body>
+        
+    </body>
+</html>

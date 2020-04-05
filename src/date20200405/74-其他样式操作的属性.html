@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <style type="text/css">
+            #box1 {
+                width: 200px;
+                height: 200px;
+                /*padding-right: 10px;*/
+                background-color: red;
+                /*border:green solid 10px ;*/
+                overflow: auto;
+            }
+            /*#box2 {*/
+            /*    padding: 100px;*/
+            /*    background-color: #bfa;*/
+            /*}*/
+
+            /*#box3 {*/
+            /*    position: absolute;*/
+            /*}*/
+
+            /*#box4 {*/
+            /*    width: 200px;*/
+            /*    height: 300px;*/
+            /*    background-color: #bfa;*/
+            /*}*/
+
+            #box5 {
+                width: 300px;
+                height: 600px;
+                background-color: yellow;
+            }
+        </style>
+        <script type="text/javascript">
+            window.onload = function () {
+                var box1 = document.getElementById("box1");
+                var btn01 = document.getElementById("btn01");
+                btn01.onclick = function () {
+                    /**
+                     * clientWidth
+                     * clientHeight
+                     *  -这两个属性可以获取元素的可见宽度和高度,不能用作设置
+                     *  - 它们返回的都是不带px的数字，可以直接进行计算
+                     *  - 它们获取的是元素的宽度，只包括内容区和内边距
+                     */
+
+                    // alert(box1.clientWidth);
+                    // alert(box1.clientHeight);
+
+                    /**
+                     * offsetWidth
+                     * offsetHeight
+                     *  - 获取元素的整个的宽度和高度，包括内容区、内边距和边框
+                     *
+                     */
+
+                    // alert(box1.offsetHeight);//140
+
+                    /**
+                     * offsetParent
+                     * 获取离当前元素最近的开启了定位祖先元素节点
+                     * 若祖先元素都没有开启，则返回body
+                     */
+                    //
+                    // var op = box4.offsetParent;
+                    // alert(op.id);
+
+
+                    /**
+                     * offsetLeft
+                     *  - 当前元素相对于其定位父元素的水平偏移量
+                     *  offsetTop
+                     *  - 当前元素相对于定位父元素的垂直偏移量
+                     */
+
+                    // alert(box1.offsetLeft);//这里的返回值是body距离页面边的距离，为8
+
+
+                    /**
+                     * scrollWidth
+                     * scrollHeight
+                     * - 可以获取元素整个滚动区域的宽度和高度
+                     */
+                    // alert(box1.scrollHeight);//600
+                    // alert(box1.scrollWidth);//300
+
+                    /**
+                     * scrollLeft
+                     *  - 可以获取水平滚动条滚动的距离
+                     *  scrollTop
+                     *  - 可以获取垂直滚动条滚动的距离
+                     */
+
+                    alert(box1.clientWidth);//183，因为原来可见区域是200，滚动条占据了17，可见区域为183
+                    alert(box1.clientHeight);
+                    alert(box1.scrollTop);//417，滚动的最大距离为 scrollHeight-clientHeight=600-183=417
+                    alert(box1.scrollLeft);//117,                300-183=117
+                    /**
+                     * 当滚动距离达到最大值  scrollHeight-clientHeight 时，表明滚动已经到底
+                     */
+                };
+
+
+            };
+        </script>
+    </head>
+    <body id="body">
+        <button id="btn01">点我一下</button>
+<!--        <div id="box2">-->
+<!--            <div id="box3">-->
+<!--                <div id="box4"></div>-->
+<!--            </div>-->
+
+<!--        </div>-->
+<!--        <br>-->
+        <div id="box1">
+            <div id="box5"></div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+
+
+
+    </head>
+    <body>
+        <!--
+            我们可以在事件对应的属性中设置一些js代码
+                这样当事件被触发时，这些代码将会执行
+                这种方式可以用，但不推荐，因为结构和行为耦合
+        -->
+        <button id="btn"> 这是一个按钮</button>
+        <script>
+            /**
+             * 事件就是用和浏览器之间的交互行为
+             * 比如：点击按钮，鼠标移动等等
+             */
+
+            /**
+             * 可以位按钮的对应事件指定除函数的形式来响应事件,当事件触发时对应的函数将会执行
+             */
+
+                //按钮对象的获取
+            var btn=document.getElementById("btn");
+            btn.onclick = function () {
+                alert("你点他干嘛呀");
+            };
+
+        </script>
+    </body>
+</html>

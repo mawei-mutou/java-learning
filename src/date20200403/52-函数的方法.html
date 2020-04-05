@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <script>
+            /**
+             * 函数的方法call和apply
+             * 它两可以指定函数内部的this指向传入的对象
+             */
+            var name="fun";
+
+            function fun(a, b) {
+                console.log("a=" + a);
+                console.log("b=" + b);
+                alert(this.name);
+            }
+
+            // fun();//以函数调用时this为window
+
+            obj1 = {
+                name: "对象obj1",
+                sayName:function () {
+                    alert(this.name);
+                }
+            };
+
+            obj2 = {
+                name: "对象obj2",
+                sayName:function () {
+                    alert(this.name);
+                }
+            };
+            // obj1.sayName();//以方法调用this为调用的对象
+            // obj1.sayName.call(obj2);//
+            //
+            // fun.call(obj2);
+            // fun.call(obj1, 3, 5);//用call方法时，第一个为对象，后面的依次传入实参
+            fun.apply(obj2, [4, 6]);//用apply方法时，第一个为对象，实参要放在一个数组里面
+
+        </script>
+    </head>
+    <body>
+        
+    </body>
+</html>
