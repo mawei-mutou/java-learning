@@ -31,8 +31,17 @@
                     var st = getComputedStyle(box1, null);
                     var width = st.width;//通过样式对象获取样式
                     alert(width);
+                    // alert(getStyle(box1, "width"));
                 };
             };
+            //获取样式的值
+            function getStyle(obj, name) {
+                if (window.getComputedStyle) {
+                    return getComputedStyle(obj, null)[name];
+                } else {
+                    return obj.currentStyle[name];
+                }
+            }
         </script>
     </head>
     <body>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <script>
+            /**
+             *可以用来操作浏览器向前或者向后翻页
+             */
+            /**
+             * length属性
+             *  -可以获取当前访问的链接数量
+             */
+
+            window.onload = function () {
+                var box1 = document.getElementById("box1");
+                box1.onclick = function () {
+                    /**
+                     * back()可以用来返回到上一个页面，作用和浏览器的返回按钮一样
+                     */
+
+                    // history.back();
+
+                    /**
+                     * forward()可以用来跳转下一个页面，作用和浏览器的前进按钮一样
+                     */
+                    history.go(2);
+                };
+            };
+        </script>
+    </head>
+    <body>
+        <h1>test01</h1>
+        <a href="86-History.html">去86！</a>
+        <button id="box1">返回下一个页面</button>
+
+    </body>
+</html>

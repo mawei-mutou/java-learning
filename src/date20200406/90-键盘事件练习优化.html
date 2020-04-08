@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <style>
+            #box1 {
+                height: 200px;
+                width: 200px;
+                background-color: red;
+                position:absolute;
+            }
+        </style>
+
+        <script>
+            /**
+             * 将方向控制和速度控制分开，解决长按时第一下卡顿的问题。
+             */
+            window.onload = function () {
+                //定义个变量，来表示移动的速度
+                var speed=10;
+
+                //方向
+                var dir=0;
+
+                //通过定时器去控制速度
+                setInterval(function () {
+                    /**
+                     * 37左
+                     * 38上
+                     * 39右
+                     * 40 下
+                     */
+
+                    var box1 = document.getElementById("box1");
+                    switch (dir) {
+                        case 37:
+                            box1.style.left = box1.offsetLeft - speed + "px";
+                            break;
+                        case 38:
+                            box1.style.top = box1.offsetTop - speed + "px";
+
+                            break;
+                        case 39:
+                            box1.style.left = box1.offsetLeft + speed + "px";
+
+                            break;
+                        case 40:
+                            box1.style.top = box1.offsetTop + speed + "px";
+                            break;
+
+                    }
+
+                }, 30);
+
+                //使div可以根据不同的方向按键向不同的方向移动
+                document.onkeydown = function (event) {
+                    event = event || window.event;
+                    //当用户按下了ctrl间以后，速度加快
+                    if (event.ctrlKey) {
+                        speed = 500;
+                    }
+                    dir = event.keyCode;
+                };
+
+                document.onkeyup = function () {
+                   dir=0;
+                };
+
+            };
+        </script>
+    </head>
+    <body>
+        <div id="box1"></div>
+
+    </body>
+</html>

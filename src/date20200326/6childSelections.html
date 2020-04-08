@@ -14,17 +14,17 @@
              */
 
 
-            p:first-child {
-                background-color: yellow;
-            }
+            /*p:first-child {*/
+            /*    background-color: yellow;*/
+            /*}*/
 
-            body>p:first-child {
-                background-color: red;
-            }
+            /*body>p:first-child {*/
+            /*    background-color: red;*/
+            /*}*/
 
-            p:nth-child(5) {
-                color: blue;
-            }
+            /*p:nth-child(5) {*/
+            /*    color: blue;*/
+            /*}*/
 
             /**
            :first-of-type
@@ -33,14 +33,31 @@
 
            和上面的类似，只不过这是在当前类型的 子元素中排列
             */
-            p:first-of-type {
+            body>p:nth-of-type(5)>span:nth-of-type(3) {
                 font-size: 20px;
+                background-color: red;
             }
         </style>
     </head>
     <body>
         <span>这里是一个span标签</span>
+        <p>这是一个p标签<br>
+            <span>1</span><br>
+            <span>2</span><br>
+            <span>3</span><br>
+            <span>4</span><br>
+
+        </p>
         <p>这是一个p标签</p>
+        <p>这是一个p标签</p>
+        <p>这是一个p标签</p>
+        <p>这是一个p标签<br>
+            <span>1</span><br>
+            <span>2</span><br>
+            <span>3</span><br>
+            <span>4</span><br>
+
+        </p>
         <p>这是一个p标签</p>
         <p>这是一个p标签</p>
         <p>这是一个p标签</p>

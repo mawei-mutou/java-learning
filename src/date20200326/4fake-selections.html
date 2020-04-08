@@ -56,9 +56,13 @@
             a:active{
                 color:black;
             }
+
+            a::selection {
+                background-color: green;
+            }
             /**
             :hover和:active伪类也可以为其他元素设置，比如p元素
-            IE6中，不支持对超链接一歪的元素设置：hover和：active
+            IE6中，不支持对超链接以外的元素设置：hover和：active
              */
             p:hover {
                 color: skyblue;

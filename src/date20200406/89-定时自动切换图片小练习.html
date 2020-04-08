@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <script>
+
+
+            window.onload = function () {
+                var imgs = ["1.gif", "2.png", "3.png", "4.png", "5.jpg"];
+                var img = document.getElementById("img");
+                img.src = imgs[0];
+                var temp=-1;
+
+                var time;
+                var box1 = document.getElementById("box1");
+                box1.onclick = function () {
+                    /**
+                     * 目前每点击一次就会开启一个定时器，点击多次就会开启多个定时器，
+                     * 这就会导致，图片切换越来越快，且只能关闭最后一个定时器
+                     * 所有需要每次点击开启下一个定时器前关闭之前的定时器
+                     */
+                    if (temp === -1) {
+                        var count = 2;
+                    } else {
+                        count = temp;
+                    }
+
+                    clearInterval(time);
+
+                    time = setInterval(function () {
+
+
+                        if (count === 6) {
+                            count = 1;
+                        }
+                        img.src = imgs[count - 1];
+                        count++;
+                        temp=count;
+                    }, 1000);
+                };
+
+                var box2 = document.getElementById("box2");
+                box2.onclick = function () {
+                    clearInterval(time);
+                };
+            };
+        </script>
+    </head>
+    <body>
+        <button id="box1">开始循环</button>
+        <button id="box2">结束循环</button><br><br>
+        <img id="img" src=""/>
+
+
+    </body>
+</html>

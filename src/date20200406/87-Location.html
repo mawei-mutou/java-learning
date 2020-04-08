@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <script>
+            /**
+             * Location
+             *  -该对象中封装了浏览器的地址栏信息
+             *
+             */
+
+            window.onload = function () {
+                var box1 = document.getElementById("box1");
+                box1.onclick = function () {
+                    //如果直接打印location，则可以获取到地址栏的信息（当前页面的完整路径）
+                    // alert(location);
+
+                    /**
+                     * 如果直接将location属性修改为一个完整的路径，或相对路径
+                     * 则页面会自动跳转到该路径,并会生成相应的历史记录
+                     *
+                     * location的assign()属性就是用了跳转到其他页面的，作用或直接修改location一样
+                     */
+
+                    // location = "http://www.baidu.com";
+                    // location.assign("http://www.baidu.com");
+
+                    /**
+                     * reload()
+                     *  - 用于重新加载当前页面，作用和刷新按钮一样
+                     *  - 如果在方法中传递一个true，作为参数，则会强制清空缓存刷新页面
+                     */
+
+                    // location.reload(true);
+
+
+                    /**
+                     * replace（）
+                     *  - 可以使用一个新的页面替换当前的页面，调用完毕也会跳转页面
+                     *  但是不会生成历史记录，不能是应用 回退按钮
+                     */
+
+                    location.replace("http://www.baidu.com");
+                };
+
+            };
+        </script>
+    </head>
+    <body>
+        <h1>History!!</h1>
+        <button id="box1">刷新</button>
+        <input type="text" value="">
+
+    </body>
+</html>

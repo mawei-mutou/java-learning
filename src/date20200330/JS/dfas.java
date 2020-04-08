@@ -20,17 +20,19 @@ public class dfas {
 ////        System.out.println(b == a);
 //        System.out.println(a);
         int score=98;
-//
-//        switch (true) {//在java里面若score为整数，score/10 结果会自动处理为整数
+        boolean a=true;
+
+////
+//        switch (a) {//在java里面若score为整数，score/10 结果会自动处理为整数
 //            case score/10 >=6:
 //                System.out.println(score);
 //
 //                break;
 
-        List<Integer> a = new ArrayList<>();
-        a.add(1);
-        a.add(2);
-        a.forEach(s->{
+        List<Integer> b = new ArrayList<>();
+        b.add(1);
+        b.add(2);
+        b.forEach(s->{
             System.out.println(s);
         });
         }

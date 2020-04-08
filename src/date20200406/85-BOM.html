@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <script>
+            /**
+             * BOM
+             * -浏览器对象模型
+             * -BOM可以使我们通过JS来操作浏览器
+             * -BOM对象有：
+             * window：代表的是整个浏览器的窗口，同时window也是网页中的全局属性
+             *      Navigator ：代表的当前浏览器的信息，通过该对象可以来识别不同的浏览器
+             *      Location：代表当前浏览器的地址栏信息，通过它可以获取地址栏信息或者操作浏览器跳转页面
+             *      History：代表浏览器的历史记录，可以通过该对象来操作浏览器的历史记录，但它不能获取具体的历史记录，只能操作浏览器向前或者向后翻页
+             *
+             * Navigator 中的 大部分属性已经无法识别浏览器。一般只用userAgent来判别浏览器的信息
+             * 火狐：Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:74.0) Gecko/20100101 Firefox/74.0
+             * Chrome:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.163 Safari/537.36
+             * Edge:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.102 Safari/537.36 Edge/18.18363
+             * IE10及以下版本可以通过这个方法识别，11版本抹去了所有的微软和IE标识，这个方法无效
+             * 对于IE11可以使用它特有的一些对象来判断是否为它：ActiveXObject
+             */
+            var ua = window.navigator.userAgent;
+            console.log(ua);
+
+            if (/firefox/i.test(ua)) {
+                alert("你是火狐！！");
+            } else if (/chrome/i.test(ua)) {
+                alert("你是Chrome！");
+            }else if (/msie/i.test(ua)) {
+                alert("你是IE");
+            }else if ("ActiveXObject" in window) {
+                alert("抓到IE11了，枪毙他！！");
+            }
+        </script>
+    </head>
+    <body>
+        
+    </body>
+</html>

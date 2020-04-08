@@ -11,11 +11,19 @@
 
 
              */
+            * {
+                margin: 0;
+                padding: 0;
+            }
+
+
             .b {
-                width: 100px;
-                height: 100px;
+                width: 200px;
+                height: 200px;
                 background-color: red;
-                margin-bottom: 100px;
+                margin-bottom: 150px;
+
+                display: inline-block;
 
             }
             .e {
@@ -31,11 +39,13 @@
                 取出重叠的方法时在之间添加别的东西，比如给a元素添加一个边框border或内边距padding
 
                  */
-            .a{
+            .a {
                 width: 200px;
                 height: 190px;
                 background-color: yellow;
-                border-top: 10px yellow solid;
+                padding-top: 10px;
+                display: inline-block;
+
             }
             .d{
                  width: 50px;
@@ -59,7 +69,7 @@
         </div>
         <div class="b"></div>
 
-        <div class="e"></div>
+<!--        <div class="e"></div>-->
 
     </body>
 </html>

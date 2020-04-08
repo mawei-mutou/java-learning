@@ -11,6 +11,12 @@
 
                 position: absolute;
             }
+            #box2 {
+                width: 300px;
+                height: 800px;
+                background-color: green;
+
+            }
         </style>
         <script>
             /**
@@ -21,7 +27,7 @@
             window.onload = function () {
                 //鼠标再整个页面中移动，固先找到body对象
                 var body = document.body;
-                var box1=document.getElementById("box1")
+                var box1 = document.getElementById("box1");
                 document.onmousemove = function (event) {
                     event = event || window.event;
                     //clientX\clientY它两是相对于可视页面的。即始终是相对于屏幕的左上角
@@ -45,5 +51,6 @@
     </head>
     <body style="height: 2000px">
         <div id="box1"></div>
+        <div id="box2"></div>
     </body>
 </html>

@@ -43,6 +43,7 @@
                 var ul = document.getElementById("ul");
                 ul.onclick=function (event) {
                     var event = event || window.event;
+
                     if (event.target.className === "link") {
                         alert("我是ul的单击响应函数");
                     }
